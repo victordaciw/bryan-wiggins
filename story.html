@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bryan Wiggins' Story | From Job Corps to the Marine Corps to Serial Entrepreneur</title>
+<meta name="description" content="Grew up poor with a single mother working three jobs. Job Corps. Marine Corps. Multiple failed businesses. Serial entrepreneur. Bryan Wiggins' story, in the trench.">
+<meta property="og:title" content="Bryan Wiggins' Story | From Job Corps to the Marine Corps to Serial Entrepreneur">
+<meta property="og:description" content="Grew up poor with a single mother working three jobs. Job Corps. Marine Corps. Multiple failed businesses. Serial entrepreneur. Bryan Wiggins' story, in the trench.">
+<meta property="og:image" content="img/bryan-mic-1380.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/kit.css">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ==========================================================================================
+   STORY PAGE ONLY (every selector is scoped under its own section: st-hero, st-chapters, st-why)
+   ========================================================================================== */
+
+/* ---------- hero: equal-line title + copy on the left, Bryan's portrait plate on the right ---------- */
+.tk.st-hero{ padding-top:64px; padding-bottom:48px; }
+.tk.st-hero .st-hero-grid{ display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); grid-template-areas:"head media" "copy media"; column-gap:clamp(40px, 6vw, 96px); align-items:start; }
+.tk.st-hero .st-hero-head{ grid-area:head; align-self:end; }
+.tk.st-hero .st-hero-head .tk-cap{ margin-bottom:28px; }
+.tk.st-hero .st-hero-h{ --fit-w:100%; margin:0; }
+.tk.st-hero .st-hero-copy{ grid-area:copy; padding-top:40px; }
+.tk.st-hero .st-hero-copy .bw-bar{ margin-bottom:28px; }
+.tk.st-hero .st-hero-copy .tk-lead{ max-width:520px; color:rgba(255,255,255,.84); }
+.tk.st-hero .st-hero-copy .bw-btns{ margin-top:38px; }
+.tk.st-hero .st-hero-media{ grid-area:media; align-self:center; }
+.tk.st-hero .st-btn-down:hover svg, .tk.st-hero .st-btn-down:focus-visible svg{ transform:translateY(3px); }
+@media (max-width: 900px){
+  .tk.st-hero .st-hero-grid{ grid-template-columns:minmax(0,1fr); grid-template-areas:"head" "media" "copy"; }
+  .tk.st-hero .st-hero-media{ margin-top:48px; width:100%; max-width:560px; justify-self:center; }
+  .tk.st-hero .st-hero-copy{ padding-top:48px; }
+}
+@media (max-width: 560px){
+  .tk.st-hero{ padding-top:40px; padding-bottom:24px; }
+  .tk.st-hero .st-hero-media{ margin-top:36px; }
+  .tk.st-hero .st-hero-copy{ padding-top:40px; }
+  .tk.st-hero .st-hero-copy .bw-btns .tk-btn{ flex:1 1 100%; }
+  .tk.st-hero .st-hero-media .bw-photo{ aspect-ratio:1 / 1; }
+}
+
+/* ---------- the seven chapters: a sticky marker (numeral, name, direction, the curve so far) beside the text ---------- */
+.tk.st-chapters{ padding-top:48px; padding-bottom:24px; }
+.tk.st-chapters .st-list{ position:relative; }
+.tk.st-chapters .st-list > li{ position:relative; }
+.tk.st-chapters .st-list > li::before{ content:""; position:absolute; left:0; right:0; top:0; height:1px; pointer-events:none;
+  background:linear-gradient(90deg, rgba(35,37,42,0), var(--tk-line) 12%, var(--tk-line) 88%, rgba(35,37,42,0)); }
+.tk.st-chapters .st-chap{ display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); column-gap:24px; row-gap:64px; padding:104px 0; scroll-margin-top:84px; }
+/* marker + text share their own row, so the sticky marker stops before the image below */
+.tk.st-chapters .st-chap-row{ grid-column:1 / -1; grid-row:1; display:grid; grid-template-columns:subgrid; align-items:start; }
+
+.tk.st-chapters .st-mark{ grid-column:1 / span 4; grid-row:1; align-self:start; position:sticky; top:calc(var(--bw-hdr-h) + 48px); }
+.tk.st-chapters .st-num{ display:block; font-size:clamp(104px, 10.4vw, 156px); line-height:.8; margin-left:-.02em; }
+.tk.st-chapters .is-down .st-num{ -webkit-text-stroke-color:rgba(var(--tk-ant-rgb),.75); }
+.tk.st-chapters .st-name{ margin-top:30px; }
+.tk.st-chapters .st-dir{ display:flex; align-items:center; gap:10px; margin-top:14px; font-size:11px; font-weight:700; line-height:1.3; letter-spacing:.22em; text-transform:uppercase; color:var(--tk-gold); }
+.tk.st-chapters .st-dir svg{ flex:0 0 auto; width:14px; height:14px; }
+.tk.st-chapters .is-down .st-dir{ color:var(--tk-ant); }
+
+/* the Trench Curve in miniature: the line so far in gold, this chapter's point lit */
+.tk.st-chapters .st-spark{ width:100%; max-width:272px; height:auto; margin-top:36px; overflow:visible; }
+.tk.st-chapters .st-spark-ground{ stroke:rgba(var(--tk-ant-rgb),.55); stroke-width:1; stroke-dasharray:2 4; vector-effect:non-scaling-stroke; }
+.tk.st-chapters .st-spark-path{ fill:none; stroke:rgba(255,255,255,.16); stroke-width:1.5; stroke-linecap:round; vector-effect:non-scaling-stroke; }
+.tk.st-chapters .st-spark-done{ fill:none; stroke:var(--tk-gold); stroke-width:1.75; stroke-linecap:round; vector-effect:non-scaling-stroke; }
+.tk.st-chapters .st-spark-dots circle{ fill:#3a3c41; }
+.tk.st-chapters .st-spark-dots circle.is-past{ fill:rgba(var(--tk-gold-rgb),.75); }
+.tk.st-chapters .st-spark-on{ fill:var(--tk-gold); stroke:#0d0c09; stroke-width:6; filter:drop-shadow(0 0 8px rgba(var(--tk-gold-rgb),.75)); }
+.tk.st-chapters .is-down .st-spark-on{ fill:var(--tk-ant); filter:drop-shadow(0 0 8px rgba(var(--tk-ant-rgb),.7)); }
+
+.tk.st-chapters .st-body{ grid-column:6 / -1; grid-row:1; }
+.tk.st-chapters .st-body .tk-h{ font-size:clamp(36px, 3.9vw, 56px); line-height:1; max-width:13em; }
+.tk.st-chapters .st-body .tk-lead{ margin-top:34px; max-width:600px; color:rgba(255,255,255,.86); }
+.tk.st-chapters .st-body .tk-body{ margin-top:20px; max-width:600px; }
+
+/* atmosphere: Bryan's images dissolve into the background under the chapter */
+.tk.st-chapters .st-mood{ grid-column:1 / -1; grid-row:2; position:relative; aspect-ratio:21 / 8; margin:-8px 0 -40px; pointer-events:none; }
+.tk.st-chapters .st-mood img{ display:block; width:100%; height:100%; max-width:none; object-fit:cover; opacity:.62;
+  filter:grayscale(.8) sepia(.35) brightness(.8) contrast(1.06);
+  -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%), linear-gradient(180deg, transparent 0%, #000 24%, #000 70%, transparent 100%);
+  -webkit-mask-composite:source-in;
+          mask-image:linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%), linear-gradient(180deg, transparent 0%, #000 24%, #000 70%, transparent 100%);
+          mask-composite:intersect; }
+.tk.st-chapters .st-mood::after{ content:""; position:absolute; inset:0; pointer-events:none; background:var(--tk-grain); opacity:.6;
+  -webkit-mask-image:radial-gradient(50% 50% at 50% 50%, #000 40%, transparent 100%); mask-image:radial-gradient(50% 50% at 50% 50%, #000 40%, transparent 100%); }
+
+/* the one real photo inside the chapters sits in the text column, so the sticky marker stays beside it */
+.tk.st-chapters .st-chap-plate{ margin-top:56px; }
+
+@media (max-width: 900px){
+  .tk.st-chapters .st-chap{ grid-template-columns:minmax(0,1fr); row-gap:40px; padding:80px 0; }
+  .tk.st-chapters .st-chap-row{ grid-template-columns:minmax(0,1fr); row-gap:36px; }
+  .tk.st-chapters .st-mark{ position:static; grid-column:1; grid-row:auto; display:grid; grid-template-columns:auto minmax(0,1fr); grid-template-areas:"num name" "num dir" "spark spark"; column-gap:24px; align-items:end; }
+  .tk.st-chapters .st-num{ grid-area:num; font-size:96px; align-self:end; }
+  .tk.st-chapters .st-name{ grid-area:name; margin-top:0; }
+  .tk.st-chapters .st-dir{ grid-area:dir; margin-top:10px; margin-bottom:2px; }
+  .tk.st-chapters .st-spark{ grid-area:spark; max-width:300px; margin-top:28px; }
+  .tk.st-chapters .st-body, .tk.st-chapters .st-mood{ grid-column:1; grid-row:auto; }
+  .tk.st-chapters .st-chap-plate{ margin-top:44px; }
+  .tk.st-chapters .st-body .tk-lead{ margin-top:26px; }
+  .tk.st-chapters .st-mood{ aspect-ratio:16 / 9; margin:-8px -20px -24px; }
+}
+@media (max-width: 560px){
+  .tk.st-chapters{ padding-top:32px; }
+  .tk.st-chapters .st-chap{ padding:64px 0 68px; row-gap:32px; }
+  .tk.st-chapters .st-chap-row{ row-gap:30px; }
+  .tk.st-chapters .st-num{ font-size:80px; }
+  .tk.st-chapters .st-mark{ column-gap:20px; }
+  .tk.st-chapters .st-dir{ letter-spacing:.18em; }
+  .tk.st-chapters .st-spark{ max-width:240px; margin-top:24px; }
+  .tk.st-chapters .st-body .tk-h{ font-size:clamp(32px, 9vw, 38px); }
+  .tk.st-chapters .st-mood{ aspect-ratio:4 / 3; }
+}
+@media (max-width: 400px){ .tk.st-chapters .st-mood{ margin-left:-16px; margin-right:-16px; } }
+
+/* ---------- why I tell it: the closing statement over the trench image ---------- */
+.tk.st-why{ padding-top:128px; padding-bottom:152px; }
+.tk.st-why .tk-fit{ margin-top:28px; }
+@media (max-width: 560px){ .tk.st-why{ padding-top:112px; padding-bottom:112px; } }
+</style>
+</head>
+<body>
+<canvas id="bw-particles" aria-hidden="true"></canvas>
+<a class="bw-skip" href="#main">Skip to content</a>
+
+<!-- ============ SHELL: announcement bar + header (copy to every page; set aria-current on that page's nav link) ============ -->
+<div class="bw-top" id="top"><a href="charlie-company.html#apply">Now accepting Charlie Company partner applications<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></div>
+<header class="bw-hdr">
+  <div class="bw-hdr-in">
+    <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+    <nav class="bw-nav" id="bw-nav" aria-label="Primary">
+      <a href="story.html" aria-current="page">Story</a>
+      <a href="charlie-company.html">Charlie Company</a>
+      <a href="trench-made-society.html">Trench Made</a>
+      <a href="social-hack.html">Social Hack</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="coaching.html">Coaching</a>
+      <a class="bw-nav-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </nav>
+    <a class="bw-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    <button class="bw-menu-btn" type="button" aria-expanded="false" aria-controls="bw-nav" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+<!-- ============ /SHELL ============ -->
+
+<main id="main">
+
+<!-- hero -->
+<section class="tk st-hero" aria-labelledby="hero-h">
+  <div class="tk-wrap st-hero-grid">
+    <div class="st-hero-head">
+      <p class="tk-cap tk-cap--left tk-rise">Bryan's story</p>
+      <h1 id="hero-h" class="tk-h tk-fit st-hero-h tk-rise" style="--d:1"><span style="--k:5.4">No handouts.</span><span style="--k:5.9">No shortcuts.</span><span class="tk-acc" style="--k:8.6">100% in the trench.</span></h1>
+    </div>
+    <figure class="bw-plate st-hero-media tk-rise" style="--d:3">
+      <span class="bw-plate-corners" aria-hidden="true"></span>
+      <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+      <div class="bw-photo bw-photo--trim" style="--ar:4 / 5">
+        <img src="img/bryan-mic-1380.jpg" alt="Bryan Wiggins at the microphone on the In The Trench podcast" width="960" height="1080" fetchpriority="high" decoding="async" style="object-position:58% 30%">
+      </div>
+    </figure>
+    <div class="st-hero-copy tk-rise" style="--d:2">
+      <i class="bw-bar" aria-hidden="true"></i>
+      <p class="tk-lead">Seven chapters. Two of them are the bottom. Every one of them is a win, because the bottom is where the man gets built.</p>
+      <div class="bw-btns">
+        <a class="tk-btn tk-btn--solid st-btn-down" href="#ch1">Start at the bottom<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3v9M4.5 8.5 8 12l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+        <a class="tk-btn" href="charlie-company.html">Skip to the offer<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- the seven chapters -->
+<section class="tk st-chapters">
+  <div class="tk-wrap">
+    <ol class="st-list">
+
+      <!-- 01 -->
+      <li><article class="st-chap is-down" id="ch1" aria-labelledby="ch1-h">
+        <div class="st-chap-row">
+        <div class="st-mark tk-rise">
+          <p class="tk-num st-num">01</p>
+          <p class="tk-h tk-h--s st-name">The start</p>
+          <p class="st-dir"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3v9M4.5 8.5 8 12l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>Down&nbsp;· Still a win</p>
+          <svg class="st-spark" viewBox="0 0 1000 345" aria-hidden="true" focusable="false"><defs><clipPath id="st-sc1"><rect x="0" y="0" width="40" height="345"/></clipPath></defs><line class="st-spark-ground" x1="0" x2="1000" y1="210" y2="210"/><path class="st-spark-path" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30"/><path class="st-spark-done" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30" clip-path="url(#st-sc1)"/><g class="st-spark-dots"><circle class="is-past" cx="40" cy="290" r="11"/><circle cx="193.3" cy="175" r="11"/><circle cx="346.7" cy="95" r="11"/><circle cx="500" cy="315" r="11"/><circle cx="653.3" cy="150" r="11"/><circle cx="806.7" cy="80" r="11"/><circle cx="960" cy="30" r="11"/></g><rect class="st-spark-on" x="23" y="273" width="34" height="34" transform="rotate(45 40 290)"/></svg>
+        </div>
+        <div class="st-body tk-rise" style="--d:1">
+          <h2 id="ch1-h" class="tk-h">A single mother. Three jobs.</h2>
+          <p class="tk-lead">I grew up poor. My mom worked three jobs to keep a roof over us, and I watched every hour of it.</p>
+          <div class="tk-body"><p>Nobody was coming to save us. There was no trust fund, no family business, no uncle with connections. That's where I learned the first rule of the trench: the provider doesn't get to quit. You find a way or you make one.</p></div>
+        </div>
+        </div>
+      </article></li>
+
+      <!-- 02 -->
+      <li><article class="st-chap" id="ch2" aria-labelledby="ch2-h">
+        <div class="st-chap-row">
+        <div class="st-mark tk-rise">
+          <p class="tk-num st-num">02</p>
+          <p class="tk-h tk-h--s st-name">Job Corps</p>
+          <p class="st-dir"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13V4M4.5 7.5 8 4l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>Up&nbsp;· Win</p>
+          <svg class="st-spark" viewBox="0 0 1000 345" aria-hidden="true" focusable="false"><defs><clipPath id="st-sc2"><rect x="0" y="0" width="193.3" height="345"/></clipPath></defs><line class="st-spark-ground" x1="0" x2="1000" y1="210" y2="210"/><path class="st-spark-path" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30"/><path class="st-spark-done" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30" clip-path="url(#st-sc2)"/><g class="st-spark-dots"><circle class="is-past" cx="40" cy="290" r="11"/><circle class="is-past" cx="193.3" cy="175" r="11"/><circle cx="346.7" cy="95" r="11"/><circle cx="500" cy="315" r="11"/><circle cx="653.3" cy="150" r="11"/><circle cx="806.7" cy="80" r="11"/><circle cx="960" cy="30" r="11"/></g><rect class="st-spark-on" x="176.3" y="158" width="34" height="34" transform="rotate(45 193.3 175)"/></svg>
+        </div>
+        <div class="st-body tk-rise" style="--d:1">
+          <h2 id="ch2-h" class="tk-h">The first time I&nbsp;chose the climb.</h2>
+          <p class="tk-lead">I earned my high school diploma through Job Corps. I didn't just pass through: I became campus president and dorm president.</p>
+          <div class="tk-body"><p>I finished a carpentry apprenticeship and wildland firefighter training. And I found a mentor: a Green Beret who flipped houses and ran appliance businesses. He showed me a man could build things with his hands and his head.</p></div>
+        </div>
+        </div>
+      </article></li>
+
+      <!-- 03 -->
+      <li><article class="st-chap" id="ch3" aria-labelledby="ch3-h">
+        <div class="st-chap-row">
+        <div class="st-mark tk-rise">
+          <p class="tk-num st-num">03</p>
+          <p class="tk-h tk-h--s st-name">Marine Corps</p>
+          <p class="st-dir"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13V4M4.5 7.5 8 4l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>Up&nbsp;· Win</p>
+          <svg class="st-spark" viewBox="0 0 1000 345" aria-hidden="true" focusable="false"><defs><clipPath id="st-sc3"><rect x="0" y="0" width="346.7" height="345"/></clipPath></defs><line class="st-spark-ground" x1="0" x2="1000" y1="210" y2="210"/><path class="st-spark-path" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30"/><path class="st-spark-done" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30" clip-path="url(#st-sc3)"/><g class="st-spark-dots"><circle class="is-past" cx="40" cy="290" r="11"/><circle class="is-past" cx="193.3" cy="175" r="11"/><circle class="is-past" cx="346.7" cy="95" r="11"/><circle cx="500" cy="315" r="11"/><circle cx="653.3" cy="150" r="11"/><circle cx="806.7" cy="80" r="11"/><circle cx="960" cy="30" r="11"/></g><rect class="st-spark-on" x="329.7" y="78" width="34" height="34" transform="rotate(45 346.7 95)"/></svg>
+        </div>
+        <div class="st-body tk-rise" style="--d:1">
+          <h2 id="ch3-h" class="tk-h">Graduated Friday. Marine on Monday.</h2>
+          <p class="tk-lead">I walked across the stage on a Friday and shipped to the Marine Corps the following Monday.</p>
+          <div class="tk-body">
+            <p>Iraq. Afghanistan. The 11th MEU. Combat action. Honor graduate at corporals course. A MCMAP black belt. I became a combat instructor while I was still a corporal.</p>
+            <p>The Corps gave me the operating system I still run today: standards, command intent, extreme ownership, and taking care of your men before yourself.</p>
+          </div>
+        </div>
+        </div>
+        <div class="st-mood tk-rise" style="--d:2" aria-hidden="true"><img src="img/stage.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
+      </article></li>
+
+      <!-- 04 -->
+      <li><article class="st-chap is-down" id="ch4" aria-labelledby="ch4-h">
+        <div class="st-chap-row">
+        <div class="st-mark tk-rise">
+          <p class="tk-num st-num">04</p>
+          <p class="tk-h tk-h--s st-name">The failures</p>
+          <p class="st-dir"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3v9M4.5 8.5 8 12l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>Down&nbsp;· Still a win</p>
+          <svg class="st-spark" viewBox="0 0 1000 345" aria-hidden="true" focusable="false"><defs><clipPath id="st-sc4"><rect x="0" y="0" width="500" height="345"/></clipPath></defs><line class="st-spark-ground" x1="0" x2="1000" y1="210" y2="210"/><path class="st-spark-path" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30"/><path class="st-spark-done" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30" clip-path="url(#st-sc4)"/><g class="st-spark-dots"><circle class="is-past" cx="40" cy="290" r="11"/><circle class="is-past" cx="193.3" cy="175" r="11"/><circle class="is-past" cx="346.7" cy="95" r="11"/><circle class="is-past" cx="500" cy="315" r="11"/><circle cx="653.3" cy="150" r="11"/><circle cx="806.7" cy="80" r="11"/><circle cx="960" cy="30" r="11"/></g><rect class="st-spark-on" x="483" y="298" width="34" height="34" transform="rotate(45 500 315)"/></svg>
+        </div>
+        <div class="st-body tk-rise" style="--d:1">
+          <h2 id="ch4-h" class="tk-h">I failed more than most men try.</h2>
+          <p class="tk-lead">I built construction work on instructor off-cycles. When I got out, I started a commercial solar business. Then expediting. Then an executive-airport shuttle company, and COVID wiped it out.</p>
+          <div class="tk-body"><p>Every one of those was tuition. I learned how money really moves, how fast a business dies without systems, and how much a man can take and still get up. You have to go down before you go up.</p></div>
+        </div>
+        </div>
+      </article></li>
+
+      <!-- 05 -->
+      <li><article class="st-chap" id="ch5" aria-labelledby="ch5-h">
+        <div class="st-chap-row">
+        <div class="st-mark tk-rise">
+          <p class="tk-num st-num">05</p>
+          <p class="tk-h tk-h--s st-name">Serial entrepreneur</p>
+          <p class="st-dir"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13V4M4.5 7.5 8 4l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>Up&nbsp;· Win</p>
+          <svg class="st-spark" viewBox="0 0 1000 345" aria-hidden="true" focusable="false"><defs><clipPath id="st-sc5"><rect x="0" y="0" width="653.3" height="345"/></clipPath></defs><line class="st-spark-ground" x1="0" x2="1000" y1="210" y2="210"/><path class="st-spark-path" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30"/><path class="st-spark-done" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30" clip-path="url(#st-sc5)"/><g class="st-spark-dots"><circle class="is-past" cx="40" cy="290" r="11"/><circle class="is-past" cx="193.3" cy="175" r="11"/><circle class="is-past" cx="346.7" cy="95" r="11"/><circle class="is-past" cx="500" cy="315" r="11"/><circle class="is-past" cx="653.3" cy="150" r="11"/><circle cx="806.7" cy="80" r="11"/><circle cx="960" cy="30" r="11"/></g><rect class="st-spark-on" x="636.3" y="133" width="34" height="34" transform="rotate(45 653.3 150)"/></svg>
+        </div>
+        <div class="st-body tk-rise" style="--d:1">
+          <h2 id="ch5-h" class="tk-h">Built it. Sold it. Built it bigger.</h2>
+          <p class="tk-lead">I started pressure washing in Nashville and Knoxville and built it into a real company. Then I sold the Knoxville business.</p>
+          <div class="tk-body"><p>My wife and I went to Brazil and studied social-media marketing together. We came home and built Charlie Company with my war brother Stephen Daniels, then Trench Made Society, The Social Hack and the In The Trench Podcast on top of it.</p></div>
+        </div>
+        </div>
+        <div class="st-mood tk-rise" style="--d:2" aria-hidden="true"><img src="img/deck.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async" style="object-position:50% 46%"></div>
+      </article></li>
+
+      <!-- 06 -->
+      <li><article class="st-chap" id="ch6" aria-labelledby="ch6-h">
+        <div class="st-chap-row">
+        <div class="st-mark tk-rise">
+          <p class="tk-num st-num">06</p>
+          <p class="tk-h tk-h--s st-name">Family</p>
+          <p class="st-dir"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13V4M4.5 7.5 8 4l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>Up&nbsp;· Win</p>
+          <svg class="st-spark" viewBox="0 0 1000 345" aria-hidden="true" focusable="false"><defs><clipPath id="st-sc6"><rect x="0" y="0" width="806.7" height="345"/></clipPath></defs><line class="st-spark-ground" x1="0" x2="1000" y1="210" y2="210"/><path class="st-spark-path" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30"/><path class="st-spark-done" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30" clip-path="url(#st-sc6)"/><g class="st-spark-dots"><circle class="is-past" cx="40" cy="290" r="11"/><circle class="is-past" cx="193.3" cy="175" r="11"/><circle class="is-past" cx="346.7" cy="95" r="11"/><circle class="is-past" cx="500" cy="315" r="11"/><circle class="is-past" cx="653.3" cy="150" r="11"/><circle class="is-past" cx="806.7" cy="80" r="11"/><circle cx="960" cy="30" r="11"/></g><rect class="st-spark-on" x="789.7" y="63" width="34" height="34" transform="rotate(45 806.7 80)"/></svg>
+        </div>
+        <div class="st-body tk-rise" style="--d:1">
+          <h2 id="ch6-h" class="tk-h">A Brazilian wife and&nbsp;a&nbsp;daughter who build with me.</h2>
+          <p class="tk-lead">Nara isn't standing behind me. She's next to me in the trench: she runs the creative team at The Social Hack. Our daughter has seen the wins and the losses up close.</p>
+          <div class="tk-body"><p>That's the part most guys miss. Building a business and leaving your family on the sidelines isn't winning. Building it together is.</p></div>
+          <figure class="bw-plate st-chap-plate">
+            <span class="bw-plate-corners" aria-hidden="true"></span>
+            <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+            <div class="bw-photo" style="--ar:16 / 9">
+              <img src="img/bryan-nara-podcast.jpg" alt="Nara and Bryan Wiggins at their microphones on the In The Trench podcast" width="1920" height="1080" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="bw-plate-cap">Bryan and Nara on In The Trench</figcaption>
+          </figure>
+        </div>
+        </div>
+      </article></li>
+
+      <!-- 07 -->
+      <li><article class="st-chap" id="ch7" aria-labelledby="ch7-h">
+        <div class="st-chap-row">
+        <div class="st-mark tk-rise">
+          <p class="tk-num st-num">07</p>
+          <p class="tk-h tk-h--s st-name">The inner circle</p>
+          <p class="st-dir"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13V4M4.5 7.5 8 4l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>Up&nbsp;· Win</p>
+          <svg class="st-spark" viewBox="0 0 1000 345" aria-hidden="true" focusable="false"><defs><clipPath id="st-sc7"><rect x="0" y="0" width="960" height="345"/></clipPath></defs><line class="st-spark-ground" x1="0" x2="1000" y1="210" y2="210"/><path class="st-spark-path" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30"/><path class="st-spark-done" d="M40,290 C65.6,270.8 142.2,207.5 193.3,175 C244.4,142.5 295.6,71.7 346.7,95 C397.8,118.3 448.9,305.8 500,315 C551.1,324.2 602.2,189.2 653.3,150 C704.4,110.8 755.6,100 806.7,80 C857.8,60 934.4,38.3 960,30" clip-path="url(#st-sc7)"/><g class="st-spark-dots"><circle class="is-past" cx="40" cy="290" r="11"/><circle class="is-past" cx="193.3" cy="175" r="11"/><circle class="is-past" cx="346.7" cy="95" r="11"/><circle class="is-past" cx="500" cy="315" r="11"/><circle class="is-past" cx="653.3" cy="150" r="11"/><circle class="is-past" cx="806.7" cy="80" r="11"/><circle class="is-past" cx="960" cy="30" r="11"/></g><rect class="st-spark-on" x="943" y="13" width="34" height="34" transform="rotate(45 960 30)"/></svg>
+        </div>
+        <div class="st-body tk-rise" style="--d:1">
+          <h2 id="ch7-h" class="tk-h">The room changed the man.</h2>
+          <p class="tk-lead">Today I sit at tables with operators, investors and builders I used to only watch on a screen.</p>
+          <div class="tk-body"><p>Here's what I learned: the circle you keep decides the life you live. So now I build that room for the next guy, and I hand him the keys.</p></div>
+        </div>
+        </div>
+        <div class="st-mood tk-rise" style="--d:2" aria-hidden="true"><img src="img/brotherhood.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async" style="object-position:50% 50%"></div>
+      </article></li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- why I tell it -->
+<section class="tk bw-final st-why" aria-labelledby="why-h">
+  <div class="tk-wrap bw-center">
+    <p class="tk-cap tk-rise">Why I tell it</p>
+    <h2 id="why-h" class="tk-h tk-fit tk-rise" style="--fit-w:820px;--d:1"><span style="--k:14.2">I can't believe the life I'm living.</span><span class="tk-acc" style="--k:8.3">You can build yours.</span></h2>
+    <div class="bw-btns bw-btns--center tk-rise" style="--d:2">
+      <a class="tk-btn tk-btn--solid" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      <a class="tk-btn" href="podcast.html">Hear more stories<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ SHELL: the Trench Report + footer (copy to every page unchanged) ============ -->
+<section class="tk bw-report" aria-labelledby="tr-h">
+  <div class="tk-wrap">
+    <div class="tk-card bw-report-card">
+      <div>
+        <p class="tk-cap tk-cap--left">The Trench Report</p>
+        <h2 id="tr-h" class="tk-h tk-h--m">Straight from the dirt. Every week.</h2>
+        <p class="bw-report-text">One email. What I'm building, what broke, and what I learned fixing it. No fluff, no spam, no selling you a dream.</p>
+      </div>
+      <div>
+        <!-- TODO GHL form -->
+        <form class="bw-form" data-form="report" novalidate>
+          <div class="bw-field">
+            <label class="bw-sr" for="tr-email">Email</label>
+            <div class="bw-inline">
+              <input class="bw-input" id="tr-email" type="email" name="email" placeholder="Your best email" required autocomplete="email" aria-describedby="tr-email-err">
+              <button class="tk-btn tk-btn--solid" type="submit">Get the Report<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></button>
+            </div>
+            <p class="bw-err" id="tr-email-err">Enter a valid email.</p>
+          </div>
+        </form>
+        <div class="bw-ok" id="report-ok" tabindex="-1" hidden><div><b>You're in.</b>First Trench Report hits your inbox this week.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bw-ft">
+  <div class="bw-ft-line" aria-hidden="true"></div>
+  <a class="bw-ft-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 354 197" aria-hidden="true" focusable="false"><path d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></a>
+  <div class="bw-ft-wrap">
+    <div class="bw-ft-grid">
+      <div class="bw-ft-about">
+        <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+        <p>Combat Marine. Serial entrepreneur. Builder of owners. No handouts, no shortcuts: 100% in the trench.</p>
+      </div>
+      <nav class="bw-ft-col" aria-labelledby="ft-work">
+        <p class="bw-ft-h" id="ft-work">Work With Bryan</p>
+        <ul>
+          <li><a href="charlie-company.html">Charlie Company Partner</a></li>
+          <li><a href="trench-made-society.html">Trench Made Society</a></li>
+          <li><a href="social-hack.html">The Social Hack</a></li>
+          <li><a href="coaching.html">1:1 Coaching</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col" aria-labelledby="ft-media">
+        <p class="bw-ft-h" id="ft-media">Media</p>
+        <ul>
+          <li><a href="podcast.html">In The Trench Podcast</a></li>
+          <li><a href="speaking.html">Book Bryan to Speak</a></li>
+          <li><a href="story.html">Bryan's Story</a></li>
+          <li><a href="podcast.html#guest">Be a Guest</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col bw-ft-col--follow" aria-labelledby="ft-follow">
+        <p class="bw-ft-h" id="ft-follow">Follow</p>
+        <ul>
+          <li><a href="https://www.instagram.com/bryan.wiggins" target="_blank" rel="noopener">Instagram @bryan.wiggins<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.trenchmadesociety.com" target="_blank" rel="noopener">trenchmadesociety.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.social-hack.com" target="_blank" rel="noopener">social-hack.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://charliecompany.pro" target="_blank" rel="noopener">charliecompany.pro<span class="bw-sr"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bw-ft-base">
+      <p>&copy; <span data-year>2026</span> In The Trench with Bryan Wiggins. All rights reserved.</p>
+      <p>Results described are Bryan's own experience. Ownership opportunities are offered only through formal agreements.</p>
+    </div>
+  </div>
+</footer>
+<!-- ============ /SHELL ============ -->
+
+<script src="assets/kit.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

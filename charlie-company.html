@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Become a Charlie Company Partner | In The Trench with Bryan Wiggins</title>
+<meta name="description" content="Buy into a Charlie Company location. Bryan's team launches it, installs the front and back office, plugs in the proven brand, and coaches you for a year inside Trench Made Society.">
+<meta property="og:title" content="Become a Charlie Company Partner | In The Trench with Bryan Wiggins">
+<meta property="og:description" content="Buy into a Charlie Company location. Bryan's team launches it, installs the front and back office, plugs in the proven brand, and coaches you for a year inside Trench Made Society.">
+<meta property="og:image" content="img/bryan-mic-2460.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/kit.css">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ==========================================================================================
+   CHARLIE COMPANY page only. Every selector is scoped under its section's own class.
+   ========================================================================================== */
+
+/* ---------- hero: centred statement over the handshake, which dissolves into the background ---------- */
+.tk.cc-hero{ padding-top:136px; padding-bottom:152px; }
+.tk.cc-hero .bw-atmos-img img{ opacity:.62; object-position:50% 46%; }
+.tk.cc-hero .bw-atmos-img::after{ background:radial-gradient(38% 40% at 50% 54%, rgba(0,0,0,.7), rgba(0,0,0,0)); }
+.tk.cc-hero .tk-fit{ margin-top:30px; }
+.tk.cc-hero .tk-lead{ margin-top:34px; max-width:600px; text-wrap:balance; color:rgba(255,255,255,.86); }
+.tk.cc-hero .bw-btns{ margin-top:46px; }
+@media (max-width: 900px){ .tk.cc-hero{ padding-top:104px; padding-bottom:120px; } }
+@media (max-width: 560px){
+  .tk.cc-hero{ padding-top:80px; padding-bottom:96px; }
+  .tk.cc-hero .bw-btns{ flex-direction:column; align-items:stretch; width:100%; }
+}
+
+/* ---------- Stephen: the story on the left, Bryan and his line on the right ---------- */
+.tk.cc-stephen .bw-split{ align-items:center; }
+.tk.cc-stephen .bw-split-a .tk-h{ max-width:11ch; }
+.tk.cc-stephen .bw-split-a .tk-lead{ margin-top:30px; }
+.tk.cc-stephen .bw-split-a .tk-body{ margin-top:22px; max-width:560px; }
+.tk.cc-stephen .bw-quote{ margin-top:36px; }
+.tk.cc-stephen .bw-quote blockquote p{ font-size:clamp(20px, 1.75vw, 24px); }
+@media (max-width: 900px){
+  .tk.cc-stephen .cc-stephen-side{ max-width:560px; }
+}
+
+/* ---------- the math: intro on hairline, then the two cards ---------- */
+.tk.cc-math .cc-math-intro{ margin-bottom:72px; }
+.tk.cc-math .cc-math-intro .tk-lead{ max-width:520px; }
+@media (max-width: 900px){ .tk.cc-math .cc-math-intro{ margin-bottom:52px; } }
+
+/* ---------- what it looks like: seven steps, the year inside the society closes the list ---------- */
+.tk.cc-build .bw-head > .tk-lead{ max-width:600px; }
+.tk.cc-build .bw-head .tk-acc{ display:inline-block; }   /* "We build it with you." wraps as one piece on phones */
+.tk.cc-build .cc-steps{ border-bottom:.5px solid var(--tk-line); }
+.tk.cc-build .cc-steps > li{ padding:34px 0 36px; }
+.tk.cc-build .cc-steps p{ max-width:46ch; }
+.tk.cc-build .cc-steps > li:last-child{ grid-column:1 / -1; border-top:0; }
+.tk.cc-build .cc-steps > li:last-child::after{ content:""; position:absolute; left:0; right:0; top:-.5px; height:1px; pointer-events:none;
+  background:linear-gradient(90deg, rgba(var(--tk-gold-rgb),0), rgba(var(--tk-gold-rgb),.75) 30%, rgba(var(--tk-gold-rgb),.75) 70%, rgba(var(--tk-gold-rgb),0)); }
+.tk.cc-build .cc-steps > li:last-child::before{ color:var(--tk-gold); -webkit-text-stroke:0; }
+/* the text column of 07 lines up with the right-hand column of the steps above (50% + 16px = one column of the list) */
+.tk.cc-build .cc-steps > li:last-child > div{ display:grid; grid-template-columns:calc(50% + 16px) minmax(0,1fr); gap:10px 64px; align-items:baseline; }
+.tk.cc-build .cc-steps > li:last-child h3{ font-size:26px; }
+.tk.cc-build .cc-steps > li:last-child p{ margin-top:0; max-width:56ch; color:rgba(255,255,255,.8); }
+@media (max-width: 760px){
+  .tk.cc-build .cc-steps > li{ padding:28px 0 30px; }
+  .tk.cc-build .cc-steps > li:last-child > div{ display:block; }
+  .tk.cc-build .cc-steps > li:last-child h3{ font-size:23px; }
+  .tk.cc-build .cc-steps > li:last-child p{ margin-top:10px; }
+}
+
+/* ---------- here's what's crazy: the value stack as the featured (pricing) card ---------- */
+.tk.cc-crazy .cc-crazy-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:48px 88px; align-items:center; }
+.tk.cc-crazy .cc-crazy-text{ order:2; }
+.tk.cc-crazy .cc-stack{ order:1; }
+.tk.cc-crazy .tk-cap{ margin-bottom:24px; }
+.tk.cc-crazy .tk-h + div{ margin-top:30px; }
+.tk.cc-crazy .tk-lead{ max-width:520px; }
+.tk.cc-crazy .tk-body{ margin-top:20px; max-width:560px; }
+.tk.cc-crazy .cc-stack{ padding:44px 40px 36px; }
+.tk.cc-crazy .cc-stack-list{ margin:0; }
+.tk.cc-crazy .cc-stack-list > div{ display:flex; align-items:center; justify-content:space-between; gap:20px; padding:15px 0; border-bottom:.5px solid var(--tk-line); }
+.tk.cc-crazy .cc-stack-list > div:first-child{ border-top:.5px solid var(--tk-line); }
+.tk.cc-crazy .cc-stack-list dt{ position:relative; padding-left:24px; font-size:15.5px; line-height:1.5; color:var(--tk-text); text-wrap:pretty; }
+.tk.cc-crazy .cc-stack-list dt::before{ content:""; position:absolute; left:2px; top:calc(.75em - 3.5px); width:7px; height:7px; background:var(--tk-gold); transform:rotate(45deg); }
+.tk.cc-crazy .cc-stack-list dd{ flex:0 0 auto; margin:0; font-size:10.5px; font-weight:700; line-height:1; letter-spacing:.2em; text-transform:uppercase; color:var(--tk-ant); }
+.tk.cc-crazy .cc-stack-list .is-yours dd{ padding:6px 8px 6px 10px; background:var(--tk-gold); color:#0a0a0a; }
+.tk.cc-crazy .cc-stack-list > .cc-stack-total{ position:relative; margin-top:22px; padding:22px 0 2px; border:0; align-items:center; }
+.tk.cc-crazy .cc-stack-total::before{ content:""; position:absolute; left:0; right:0; top:0; height:1px;
+  background:linear-gradient(90deg, rgba(var(--tk-gold-rgb),0), rgba(var(--tk-gold-rgb),.8) 50%, rgba(var(--tk-gold-rgb),0)); }
+.tk.cc-crazy .cc-stack-total dt{ padding:0; font-family:var(--tk-display); font-weight:400; font-size:22px; line-height:1.1; letter-spacing:.035em; text-transform:uppercase; color:#fff; text-wrap:balance; }
+.tk.cc-crazy .cc-stack-total dt::before{ display:none; }
+.tk.cc-crazy .cc-stack-total a{ display:inline-flex; align-items:center; gap:9px; min-height:44px; padding:0 2px; font-size:11.5px; letter-spacing:.2em; color:var(--tk-gold); transition:color .2s; }
+.tk.cc-crazy .cc-stack-total a svg{ width:14px; height:14px; transition:transform .25s var(--bw-ease); }
+.tk.cc-crazy .cc-stack-total a:hover{ color:#ffd24a; }
+.tk.cc-crazy .cc-stack-total a:hover svg{ transform:translateY(3px); }
+@media (max-width: 1180px){ .tk.cc-crazy .cc-crazy-grid{ column-gap:56px; } .tk.cc-crazy .cc-stack{ padding-left:32px; padding-right:32px; } }
+@media (max-width: 1000px){
+  .tk.cc-crazy .cc-crazy-grid{ grid-template-columns:1fr; gap:56px; }
+  .tk.cc-crazy .cc-crazy-text{ order:1; max-width:680px; }
+  .tk.cc-crazy .cc-stack{ order:2; width:100%; max-width:640px; }
+}
+@media (max-width: 560px){
+  .tk.cc-crazy .cc-stack{ padding:40px 20px 28px; }
+  .tk.cc-crazy .cc-stack-list > div{ gap:14px; }
+  .tk.cc-crazy .cc-stack-list dt{ font-size:15px; padding-left:20px; }
+  .tk.cc-crazy .cc-stack-list dd{ letter-spacing:.16em; }
+  .tk.cc-crazy .cc-stack-list > .cc-stack-total{ flex-direction:column; align-items:flex-start; gap:6px; }
+  .tk.cc-crazy .cc-stack-total dt{ font-size:21px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .tk.cc-crazy .cc-stack-total a svg{ transition:none; }
+  .tk.cc-crazy .cc-stack-total a:hover svg{ transform:none; }
+}
+
+/* ---------- who this is for: three doors, then the fit ---------- */
+.tk.cc-doors .cc-doors-q{ font-size:clamp(36px, 4.4vw, 60px); letter-spacing:-.03em; line-height:1.04; }
+.tk.cc-doors .cc-door-grid{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px; align-items:stretch; }
+.tk.cc-doors .cc-door{ display:flex; flex-direction:column; align-items:flex-start; padding:34px 32px 30px; }
+.tk.cc-doors .cc-door-n{ display:flex; align-items:flex-end; gap:12px; }
+.tk.cc-doors .cc-door-w{ padding-bottom:5px; font-size:11px; font-weight:700; line-height:1; letter-spacing:.26em; text-transform:uppercase; color:var(--tk-ant); }
+.tk.cc-doors .cc-door-n .tk-num{ font-size:60px; }
+.tk.cc-doors .cc-door h3{ margin-top:30px; }
+.tk.cc-doors .cc-door-says{ margin-top:16px; font-size:19px; font-weight:600; line-height:1.3; letter-spacing:-.015em; color:#fff; text-wrap:balance; }
+.tk.cc-doors .cc-door-p{ margin-top:16px; font-size:15.5px; line-height:1.65; color:var(--tk-dim); text-wrap:pretty; }
+.tk.cc-doors .cc-door-fit{ width:100%; margin-top:auto; padding-top:28px; }
+.tk.cc-doors .cc-door-fit > p{ font-size:14.5px; line-height:1.6; color:var(--tk-text); text-wrap:pretty; }
+.tk.cc-doors .cc-door-fit > .cc-door-fit-l{ display:flex; align-items:center; gap:12px; margin-bottom:10px; padding-top:20px; border-top:.5px solid rgba(var(--tk-ant-rgb),.35);
+  font-size:10.5px; font-weight:700; line-height:1; letter-spacing:.24em; text-transform:uppercase; color:var(--tk-ant); }
+.tk.cc-doors .cc-fit{ margin-top:104px; gap:48px 72px; }
+.tk.cc-doors .cc-fit h3{ margin-bottom:22px; }
+.tk.cc-doors .cc-fit .tk-list li{ font-size:16px; padding-top:16px; padding-bottom:16px; }
+.tk.cc-doors .cc-fit .tk-list--ruled li::before{ top:calc(16px + .775em - 3.5px); }
+.tk.cc-doors .cc-fit .tk-list--ruled.tk-list--no li::before{ top:calc(16px + .775em - 5px); }
+@media (max-width: 1000px){
+  .tk.cc-doors .cc-door-grid{ grid-template-columns:1fr; max-width:640px; margin:0 auto; }
+  .tk.cc-doors .cc-door{ padding:30px 28px 28px; }
+  .tk.cc-doors .cc-door-fit{ padding-top:24px; }
+  .tk.cc-doors .cc-fit{ margin-top:80px; }
+}
+@media (max-width: 560px){
+  .tk.cc-doors .cc-door{ padding:28px 20px 24px; }
+  .tk.cc-doors .cc-door-n .tk-num{ font-size:52px; }
+  .tk.cc-doors .cc-door h3{ margin-top:24px; }
+  .tk.cc-doors .cc-fit{ margin-top:72px; }
+}
+
+/* ---------- apply: the case on the left, the application on the right ---------- */
+.tk.cc-apply .cc-apply-grid{ display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:48px 72px; align-items:center; }
+.tk.cc-apply .tk-cap{ margin-bottom:24px; }
+.tk.cc-apply .tk-h + div{ margin-top:30px; }
+.tk.cc-apply .tk-body{ margin-top:20px; }
+.tk.cc-apply .cc-next{ position:relative; display:flex; align-items:baseline; flex-wrap:wrap; gap:8px 14px; margin-top:44px; padding:22px 0; border-bottom:.5px solid var(--tk-line); }
+.tk.cc-apply .cc-next::before{ content:""; position:absolute; left:0; right:0; top:0; height:1px; background:linear-gradient(90deg, rgba(var(--tk-ant-rgb),.8), rgba(var(--tk-ant-rgb),0)); }
+.tk.cc-apply .cc-next-l{ font-size:11px; font-weight:700; line-height:1; letter-spacing:.24em; text-transform:uppercase; color:var(--tk-ant); }
+.tk.cc-apply .cc-next > i{ font-style:normal; color:var(--tk-faint); }
+.tk.cc-apply .cc-next-o{ display:inline-flex; align-items:baseline; gap:12px; margin-left:auto; font-size:11px; font-weight:700; line-height:1; letter-spacing:.24em; text-transform:uppercase; color:var(--tk-text); }
+.tk.cc-apply .cc-next-o b{ font-family:var(--tk-display); font-weight:400; font-size:44px; line-height:.9; letter-spacing:.01em; color:transparent; -webkit-text-stroke:1.2px rgba(var(--tk-gold-rgb),.75); }
+.tk.cc-apply .cc-form-card{ padding:44px 44px 40px; }
+.tk.cc-apply .bw-field > label{ letter-spacing:.16em; }
+.tk.cc-apply .bw-form-act{ display:flex; }
+/* the confirmation replaces the form inside the card: no second frame */
+.tk.cc-apply .cc-form-card .bw-ok{ padding:4px 0; border:0; background:none; font-size:16.5px; }
+.tk.cc-apply .cc-form-card .bw-ok b{ margin-bottom:6px; font-size:18px; }
+.tk.cc-apply .bw-form-act .tk-btn{ flex:1 1 auto; }
+@media (max-width: 1080px){
+  .tk.cc-apply .cc-apply-grid{ grid-template-columns:1fr; gap:56px; }
+  .tk.cc-apply .cc-apply-text{ max-width:680px; }
+  .tk.cc-apply .cc-form-card{ width:100%; max-width:760px; }
+}
+@media (max-width: 560px){
+  .tk.cc-apply .cc-form-card{ padding:36px 20px 28px; }
+  .tk.cc-apply .cc-next-o b{ font-size:38px; }
+}
+</style>
+</head>
+<body>
+<canvas id="bw-particles" aria-hidden="true"></canvas>
+<a class="bw-skip" href="#main">Skip to content</a>
+
+<!-- ============ SHELL: announcement bar + header (copy to every page; set aria-current on that page's nav link) ============ -->
+<div class="bw-top" id="top"><a href="charlie-company.html#apply">Now accepting Charlie Company partner applications<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></div>
+<header class="bw-hdr">
+  <div class="bw-hdr-in">
+    <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+    <nav class="bw-nav" id="bw-nav" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <a href="charlie-company.html" aria-current="page">Charlie Company</a>
+      <a href="trench-made-society.html">Trench Made</a>
+      <a href="social-hack.html">Social Hack</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="coaching.html">Coaching</a>
+      <a class="bw-nav-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </nav>
+    <a class="bw-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    <button class="bw-menu-btn" type="button" aria-expanded="false" aria-controls="bw-nav" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+<!-- ============ /SHELL ============ -->
+
+<main id="main">
+
+<!-- hero -->
+<section class="tk bw-atmos cc-hero" aria-labelledby="hero-h">
+  <div class="bw-atmos-img" aria-hidden="true"><img src="img/partners.webp" alt="" width="1100" height="733" fetchpriority="high" decoding="async"></div>
+  <div class="tk-wrap bw-center">
+    <p class="tk-cap tk-cap--long tk-rise">Charlie Company&nbsp;· Partner program</p>
+    <h1 id="hero-h" class="tk-h tk-fit tk-rise" style="--fit-w:880px;--d:1"><span style="--k:9.4">Stop trading hours.</span><span class="tk-acc" style="--k:7.7">Start owning it.</span></h1>
+    <p class="tk-lead tk-rise" style="--d:2">Charlie Company exists to give working men a real fighting chance at running and owning a business. You buy in. We build it with you. You become the owner.</p>
+    <div class="bw-btns bw-btns--center tk-rise" style="--d:3">
+      <a class="tk-btn tk-btn--solid" href="#apply">Apply to Partner<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      <a class="tk-btn" href="#stephen">Read Stephen's story<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- owner #001: Stephen -->
+<section class="tk cc-stephen" id="stephen" aria-labelledby="stephen-h">
+  <div class="tk-wrap bw-split bw-split--wide-a">
+    <div class="bw-split-a">
+      <p class="tk-cap tk-cap--left tk-rise">Owner #001&nbsp;· Stephen Daniels</p>
+      <h2 id="stephen-h" class="tk-h tk-h--l tk-rise" style="--d:1">He sold everything in Wisconsin.</h2>
+      <div class="tk-rise" style="--d:2">
+        <p class="tk-lead">Stephen is my war brother. Certified master mechanic. Top-tier professional truck driver. Good at everything he touched.</p>
+        <div class="tk-body">
+          <p>He thought he was already at the bottom. He wasn't. He was living a comfortable life: no risk, no reward, and the results he had were a reflection of that. I showed him that.</p>
+          <p>So he sold it all, left Wisconsin, and invested heavily into owning Charlie Company Nashville. He chose to go down so he could finally go up.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bw-split-b cc-stephen-side">
+      <figure class="bw-plate tk-rise" style="--d:2">
+        <span class="bw-plate-corners" aria-hidden="true"></span>
+        <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+        <div class="bw-photo bw-photo--trim" style="--ar:5 / 6">
+          <img src="img/bryan-mic-2460.jpg" alt="Bryan Wiggins speaking at the microphone on the In The Trench podcast" width="960" height="1080" loading="lazy" decoding="async" style="object-position:50% 30%">
+        </div>
+      </figure>
+      <figure class="bw-quote tk-rise" style="--d:3">
+        <blockquote><p>&ldquo;You have to go down before you go up. Comfortable is the most expensive place a man can live.&rdquo;</p></blockquote>
+        <figcaption>Bryan Wiggins</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- the math nobody teaches you -->
+<section class="tk cc-math" aria-labelledby="math-h">
+  <div class="tk-wrap">
+    <div class="bw-intro cc-math-intro">
+      <div>
+        <p class="tk-cap tk-cap--left tk-rise">The math nobody teaches you</p>
+        <h2 id="math-h" class="tk-h tk-h--l tk-rise" style="--d:1">A great tradesman is only valuable <em class="tk-acc">while he's working.</em></h2>
+      </div>
+      <p class="tk-lead tk-rise" style="--d:2">Stephen was building himself into the best mechanic and the best driver he could be. Respectable. But the second he stops, the value stops. Build out a location instead: learn to run a business and lead a team, and you build something that pays you whether or not you're the one holding the wrench.</p>
+    </div>
+    <div class="bw-compare">
+      <article class="tk-card tk-card--quiet tk-rise" style="--d:2" aria-labelledby="lin-h">
+        <div class="bw-compare-top"><span class="tk-badge">The way most guys do it</span><h3 id="lin-h" class="tk-h tk-h--s">Linear Value</h3></div>
+        <p class="bw-compare-sub">You get paid when you work. You stop, the money stops.</p>
+        <svg class="bw-compare-chart" viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true" focusable="false"><line class="base" x1="0" y1="100" x2="300" y2="100"/><path class="grey" d="M0,100 L60,78 L60,100 L120,78 L120,100 L180,78 L180,100 L240,78 L240,100 L300,78"/></svg>
+        <ul class="tk-list tk-list--ruled tk-list--no tk-list--muted">
+          <li><b>Certified master mechanic.</b> Valuable, while you're under the hood.</li>
+          <li><b>Top-tier truck driver.</b> Valuable, while you're behind the wheel.</li>
+          <li><b>Chases the better offer.</b> More hours, same ceiling.</li>
+          <li><b>Never becomes.</b> Thirty years of reps, zero equity.</li>
+        </ul>
+      </article>
+      <article class="tk-card tk-card--gold tk-rise" style="--d:3" aria-labelledby="exp-h">
+        <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+        <div class="bw-compare-top"><span class="tk-badge tk-badge--solid">The trench way</span><h3 id="exp-h" class="tk-h tk-h--s tk-acc">Exponential Value</h3></div>
+        <p class="bw-compare-sub">Build it right once. Reap it for the rest of your life.</p>
+        <svg class="bw-compare-chart" viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="bwCmpFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F9C228" stop-opacity=".2"/><stop offset="1" stop-color="#F9C228" stop-opacity="0"/></linearGradient></defs><line class="base" x1="0" y1="100" x2="300" y2="100"/><path class="area" d="M0,100 C80,100 120,96 170,82 C220,66 255,40 300,6 L300,100 Z"/><path class="gold" d="M0,100 C80,100 120,96 170,82 C220,66 255,40 300,6"/></svg>
+        <ul class="tk-list tk-list--ruled tk-list--solid">
+          <li><b>A team of people</b> who show up without you.</li>
+          <li><b>Operating procedures</b> that run the day.</li>
+          <li><b>Systems and processes</b> that don't need you on every job.</li>
+          <li><b>An asset with your name on it</b>: that's how wealth is built.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- what it looks like -->
+<section class="tk cc-build" aria-labelledby="build-h">
+  <div class="tk-wrap">
+    <div class="bw-head bw-head--center">
+      <p class="tk-cap tk-rise">What it looks like</p>
+      <h2 id="build-h" class="tk-h tk-h--l tk-rise" style="--d:1">You buy in. <em class="tk-acc">We build it with you.</em></h2>
+      <p class="tk-lead tk-rise" style="--d:2">This is not a franchise where you get a binder and a logo and good luck. My team and I stand the location up next to you.</p>
+    </div>
+    <ol class="bw-steps cc-steps tk-rise" style="--d:3">
+      <li><div><h3>You buy in</h3><p>You own a percentage of your Charlie Company location. Real ownership, under a formal agreement.</p></div></li>
+      <li><div><h3>We start the location up</h3><p>Bryan and the team launch your market with you, on the ground, not on a Zoom call.</p></div></li>
+      <li><div><h3>Front and back office installed</h3><p>CRM, scheduling, estimating, sales process, invoicing, bookkeeping workflow and the KPI board: implemented, not handed over in a PDF.</p></div></li>
+      <li><div><h3>Every account set up</h3><p>Software, vendors, suppliers and marketing accounts are configured for you so day one is about jobs, not logins.</p></div></li>
+      <li><div><h3>The proven brand, plugged in</h3><p>You launch under a brand that already has an audience, a reputation and a content engine behind it.</p></div></li>
+      <li><div><h3>Trained on every aspect</h3><p>How to hire workers. How to get jobs. How to deliver them. How to collect. How to lead the team. Basically everything about the business.</p></div></li>
+      <li><div><h3>One year inside Trench Made Society</h3><p>The full library, the videos and real-time coaching from Bryan and the room, for a full year.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- here's what's crazy about it -->
+<section class="tk cc-crazy" aria-labelledby="crazy-h">
+  <div class="tk-wrap cc-crazy-grid">
+    <div class="cc-crazy-text">
+      <p class="tk-cap tk-cap--left tk-rise">Here's what's crazy about it</p>
+      <h2 id="crazy-h" class="tk-h tk-h--l tk-rise" style="--d:1">The coaching alone is worth more than the buy-in.</h2>
+      <div class="tk-rise" style="--d:2">
+        <p class="tk-lead">Top-tier business coaches charge six and seven figures for the kind of access you get as a partner. Here, it's part of your deal.</p>
+        <div class="tk-body"><p>You're not buying a job. You're buying a business, a team that builds it with you, and a year in the room that teaches you to run it.</p></div>
+      </div>
+    </div>
+    <div class="tk-card tk-card--gold cc-stack tk-rise" style="--d:2">
+      <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+      <dl class="cc-stack-list">
+        <div class="is-yours"><dt>Ownership stake in your location</dt><dd>Yours</dd></div>
+        <div><dt>Location launch with Bryan's team</dt><dd>Included</dd></div>
+        <div><dt>Front + back office implementation</dt><dd>Included</dd></div>
+        <div><dt>All accounts and tech stack set up</dt><dd>Included</dd></div>
+        <div><dt>Proven Charlie Company brand</dt><dd>Included</dd></div>
+        <div><dt>Hiring, sales and operations training</dt><dd>Included</dd></div>
+        <div><dt>12 months of Trench Made Society coaching</dt><dd>Included</dd></div>
+        <div class="cc-stack-total"><dt>Buy-in discussed on your call</dt><dd><a href="#apply">Apply below<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3v9M4.5 8.5 8 12l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- who this is for -->
+<section class="tk cc-doors" aria-labelledby="doors-h">
+  <div class="tk-wrap">
+    <div class="bw-head bw-head--center">
+      <p class="tk-cap tk-rise">Who this is for</p>
+      <h2 id="doors-h" class="tk-q cc-doors-q tk-rise" style="--d:1">Which one are you?</h2>
+    </div>
+    <div class="cc-door-grid">
+      <article class="tk-card cc-door tk-rise" style="--d:2" aria-labelledby="door1-h">
+        <p class="cc-door-n"><span class="cc-door-w">Door</span> <span class="tk-num">01</span></p>
+        <h3 id="door1-h" class="tk-h tk-h--s">The Struggling Operator</h3>
+        <p class="cc-door-says">&ldquo;I'm booked out but I'm broke.&rdquo;</p>
+        <p class="cc-door-p">You already run a service business. You're doing every job yourself and the systems collapse the second you step away.</p>
+        <div class="cc-door-fit"><p class="cc-door-fit-l">Non-negotiable</p> <p>The desire and willpower to change. Coachable. Tired of being tired.</p></div>
+      </article>
+      <article class="tk-card cc-door tk-rise" style="--d:3" aria-labelledby="door2-h">
+        <p class="cc-door-n"><span class="cc-door-w">Door</span> <span class="tk-num">02</span></p>
+        <h3 id="door2-h" class="tk-h tk-h--s">The Sales Killer</h3>
+        <p class="cc-door-says">&ldquo;I can sell anything. I hate the back-office stuff.&rdquo;</p>
+        <p class="cc-door-p">You have the reps and you close. You want skin in the game without carrying payroll, licensing and the tech stack alone.</p>
+        <div class="cc-door-fit"><p class="cc-door-fit-l">Non-negotiable</p> <p>At peace with leading the men while the machine runs behind you.</p></div>
+      </article>
+      <article class="tk-card cc-door tk-rise" style="--d:4" aria-labelledby="door3-h">
+        <p class="cc-door-n"><span class="cc-door-w">Door</span> <span class="tk-num">03</span></p>
+        <h3 id="door3-h" class="tk-h tk-h--s">The Backed Investor-Operator</h3>
+        <p class="cc-door-says">&ldquo;I've got the capital. I need the model.&rdquo;</p>
+        <p class="cc-door-p">Veteran, ex-corporate or second-career leader with money to deploy who wants a proven model, not a science project.</p>
+        <div class="cc-door-fit"><p class="cc-door-fit-l">Non-negotiable</p> <p>You run the playbook as designed. That's why you bought in.</p></div>
+      </article>
+    </div>
+
+    <div class="bw-fit cc-fit">
+      <div class="tk-rise" style="--d:1">
+        <h3 class="tk-h tk-h--s">This is for you if</h3>
+        <ul class="tk-list tk-list--ruled tk-list--solid">
+          <li>You're willing to go down before you go up.</li>
+          <li>You want to become a leader who runs a team.</li>
+          <li>You'll follow a proven system instead of reinventing it.</li>
+          <li>You're building for your family, not your ego.</li>
+        </ul>
+      </div>
+      <div class="tk-rise" style="--d:2">
+        <h3 class="tk-h tk-h--s">This is not for you if</h3>
+        <ul class="tk-list tk-list--ruled tk-list--no tk-list--muted">
+          <li>You're looking for passive income.</li>
+          <li>You want the money without the becoming.</li>
+          <li>You'll quit the first month it gets hard.</li>
+          <li>You need to be right more than you need to win.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- apply -->
+<section class="tk cc-apply" id="apply" aria-labelledby="apply-h">
+  <div class="tk-wrap cc-apply-grid">
+    <div class="cc-apply-text">
+      <p class="tk-cap tk-cap--left tk-rise">Apply</p>
+      <h2 id="apply-h" class="tk-h tk-h--l tk-rise" style="--d:1">Claim the next <em class="tk-acc">owner number.</em></h2>
+      <div class="tk-rise" style="--d:2">
+        <p class="tk-lead">Applications are reviewed by Bryan's team. Qualified applicants get a call to walk through markets, buy-in and fit.</p>
+        <div class="tk-body"><p>We say no more than we say yes. That's how we protect the brand and the owners already in it.</p></div>
+      </div>
+      <p class="cc-next tk-rise" style="--d:3"><span class="cc-next-l">Next on the roster</span><i aria-hidden="true">·</i><span class="cc-next-o">Owner <b>#002</b></span></p>
+    </div>
+    <div class="tk-card cc-form-card tk-rise" style="--d:2">
+      <!-- TODO GHL form -->
+      <form class="bw-form" data-form="partner" novalidate>
+        <div class="bw-form-grid">
+          <div class="bw-field">
+            <label for="partner-name">Full name *</label>
+            <input class="bw-input" id="partner-name" type="text" name="name" required autocomplete="name" aria-describedby="partner-name-err">
+            <p class="bw-err" id="partner-name-err">Required.</p>
+          </div>
+          <div class="bw-field">
+            <label for="partner-email">Email *</label>
+            <input class="bw-input" id="partner-email" type="email" name="email" required autocomplete="email" aria-describedby="partner-email-err">
+            <p class="bw-err" id="partner-email-err">Required.</p>
+          </div>
+          <div class="bw-field">
+            <label for="partner-phone">Phone *</label>
+            <input class="bw-input" id="partner-phone" type="tel" name="phone" required autocomplete="tel" aria-describedby="partner-phone-err">
+            <p class="bw-err" id="partner-phone-err">Required.</p>
+          </div>
+          <div class="bw-field">
+            <label for="partner-city">City / market you want *</label>
+            <input class="bw-input" id="partner-city" type="text" name="city" required aria-describedby="partner-city-err">
+            <p class="bw-err" id="partner-city-err">Required.</p>
+          </div>
+          <div class="bw-field bw-field--full">
+            <label for="partner-door">Which door are you? *</label>
+            <select class="bw-input" id="partner-door" name="door" required aria-describedby="partner-door-err">
+              <option value="">Select one</option>
+              <option>The Struggling Operator</option>
+              <option>The Sales Killer</option>
+              <option>The Backed Investor-Operator</option>
+              <option>Not sure yet</option>
+            </select>
+            <p class="bw-err" id="partner-door-err">Required.</p>
+          </div>
+          <div class="bw-field">
+            <label for="partner-capital">Capital available to invest *</label>
+            <select class="bw-input" id="partner-capital" name="capital" required aria-describedby="partner-capital-err">
+              <option value="">Select one</option>
+              <option>Under $25K</option>
+              <option>$25K-$50K</option>
+              <option>$50K-$100K</option>
+              <option>$100K-$250K</option>
+              <option>$250K+</option>
+            </select>
+            <p class="bw-err" id="partner-capital-err">Required.</p>
+          </div>
+          <div class="bw-field">
+            <label for="partner-timeline">When can you start? *</label>
+            <select class="bw-input" id="partner-timeline" name="timeline" required aria-describedby="partner-timeline-err">
+              <option value="">Select one</option>
+              <option>Within 30 days</option>
+              <option>1-3 months</option>
+              <option>3-6 months</option>
+              <option>6+ months</option>
+            </select>
+            <p class="bw-err" id="partner-timeline-err">Required.</p>
+          </div>
+          <div class="bw-field bw-field--full">
+            <label for="partner-why">What are you building, and who are you building it for? *</label>
+            <textarea class="bw-input" id="partner-why" name="why" required aria-describedby="partner-why-err"></textarea>
+            <p class="bw-err" id="partner-why-err">Required.</p>
+          </div>
+        </div>
+        <div class="bw-form-act"><button class="tk-btn tk-btn--solid" type="submit">Submit Application<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></button></div>
+        <p class="bw-form-note">Every application is read by Bryan's team. Expect a reply within two business days.</p>
+      </form>
+      <div class="bw-ok" id="partner-ok" tabindex="-1" hidden><div><b>Application received.</b>Bryan's team will review it and reach out within two business days. Start watching the podcast while you wait.</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ SHELL: the Trench Report + footer (copy to every page unchanged) ============ -->
+<section class="tk bw-report" aria-labelledby="tr-h">
+  <div class="tk-wrap">
+    <div class="tk-card bw-report-card">
+      <div>
+        <p class="tk-cap tk-cap--left">The Trench Report</p>
+        <h2 id="tr-h" class="tk-h tk-h--m">Straight from the dirt. Every week.</h2>
+        <p class="bw-report-text">One email. What I'm building, what broke, and what I learned fixing it. No fluff, no spam, no selling you a dream.</p>
+      </div>
+      <div>
+        <!-- TODO GHL form -->
+        <form class="bw-form" data-form="report" novalidate>
+          <div class="bw-field">
+            <label class="bw-sr" for="tr-email">Email</label>
+            <div class="bw-inline">
+              <input class="bw-input" id="tr-email" type="email" name="email" placeholder="Your best email" required autocomplete="email" aria-describedby="tr-email-err">
+              <button class="tk-btn tk-btn--solid" type="submit">Get the Report<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></button>
+            </div>
+            <p class="bw-err" id="tr-email-err">Enter a valid email.</p>
+          </div>
+        </form>
+        <div class="bw-ok" id="report-ok" tabindex="-1" hidden><div><b>You're in.</b>First Trench Report hits your inbox this week.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bw-ft">
+  <div class="bw-ft-line" aria-hidden="true"></div>
+  <a class="bw-ft-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 354 197" aria-hidden="true" focusable="false"><path d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></a>
+  <div class="bw-ft-wrap">
+    <div class="bw-ft-grid">
+      <div class="bw-ft-about">
+        <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+        <p>Combat Marine. Serial entrepreneur. Builder of owners. No handouts, no shortcuts: 100% in the trench.</p>
+      </div>
+      <nav class="bw-ft-col" aria-labelledby="ft-work">
+        <p class="bw-ft-h" id="ft-work">Work With Bryan</p>
+        <ul>
+          <li><a href="charlie-company.html">Charlie Company Partner</a></li>
+          <li><a href="trench-made-society.html">Trench Made Society</a></li>
+          <li><a href="social-hack.html">The Social Hack</a></li>
+          <li><a href="coaching.html">1:1 Coaching</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col" aria-labelledby="ft-media">
+        <p class="bw-ft-h" id="ft-media">Media</p>
+        <ul>
+          <li><a href="podcast.html">In The Trench Podcast</a></li>
+          <li><a href="speaking.html">Book Bryan to Speak</a></li>
+          <li><a href="story.html">Bryan's Story</a></li>
+          <li><a href="podcast.html#guest">Be a Guest</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col bw-ft-col--follow" aria-labelledby="ft-follow">
+        <p class="bw-ft-h" id="ft-follow">Follow</p>
+        <ul>
+          <li><a href="https://www.instagram.com/bryan.wiggins" target="_blank" rel="noopener">Instagram @bryan.wiggins<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.trenchmadesociety.com" target="_blank" rel="noopener">trenchmadesociety.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.social-hack.com" target="_blank" rel="noopener">social-hack.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://charliecompany.pro" target="_blank" rel="noopener">charliecompany.pro<span class="bw-sr"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bw-ft-base">
+      <p>&copy; <span data-year>2026</span> In The Trench with Bryan Wiggins. All rights reserved.</p>
+      <p>Results described are Bryan's own experience. Ownership opportunities are offered only through formal agreements.</p>
+    </div>
+  </div>
+</footer>
+<!-- ============ /SHELL ============ -->
+
+<script src="assets/kit.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

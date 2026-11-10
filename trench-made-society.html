@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trench Made Society | Brotherhood for Blue-Collar Owners</title>
+<meta name="description" content="Trench Made Society is Bryan Wiggins' brotherhood for blue-collar owners: KPI literacy, burn per man-hour, practical AI, systems and real coaching.">
+<meta property="og:title" content="Trench Made Society | Brotherhood for Blue-Collar Owners">
+<meta property="og:description" content="Trench Made Society is Bryan Wiggins' brotherhood for blue-collar owners: KPI literacy, burn per man-hour, practical AI, systems and real coaching.">
+<meta property="og:image" content="img/bryan-mic-1380.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/kit.css">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+/* ==========================================================================================
+   trench-made-society.html only. Every selector is scoped under its section's own class
+   (tms-hero, tms-inside, tms-creed). Joining happens on trenchmadesociety.com; this page only describes it.
+   ========================================================================================== */
+
+/* ---------- hero: the crown, then a centred equal-line statement over the room, desaturated to the site's palette ---------- */
+.tk.tms-hero{ padding-top:112px; padding-bottom:136px; }
+/* a narrower window on the room keeps the hanging lamps out of the headline */
+.tk.tms-hero .bw-atmos-img img{ width:min(980px, 150%); opacity:.82; object-position:0% 50%; filter:grayscale(1) sepia(.36) brightness(1) contrast(1.12); }
+.tk.tms-hero .bw-atmos-img::after{ background:radial-gradient(38% 46% at 50% 44%, rgba(0,0,0,.66), rgba(0,0,0,.16) 70%, rgba(0,0,0,0)); }
+.tk.tms-hero .tms-crown{ width:58px; height:auto; aspect-ratio:354 / 197; margin-bottom:30px; color:var(--tk-ant); filter:drop-shadow(0 0 16px rgba(var(--tk-gold-rgb),.28)); }
+.tk.tms-hero .tms-hero-h{ --fit-w:860px; margin-top:30px; }
+.tk.tms-hero .tms-hero-lead{ margin-top:40px; max-width:600px; text-wrap:balance; color:rgba(255,255,255,.84); }
+.tk.tms-hero .bw-btns{ margin-top:46px; }
+.tk.tms-hero .tms-down svg{ transform:rotate(90deg); }
+.tk.tms-hero .tms-down:hover svg, .tk.tms-hero .tms-down:focus-visible svg{ transform:rotate(90deg) translateX(3px); }
+@media (max-width: 560px){
+  .tk.tms-hero{ padding-top:72px; padding-bottom:96px; }
+  .tk.tms-hero .bw-atmos-img img{ object-position:36% 50%; }
+  .tk.tms-hero .tms-crown{ width:48px; margin-bottom:24px; }
+  .tk.tms-hero .tms-hero-lead{ margin-top:32px; }
+  .tk.tms-hero .bw-btns{ flex-direction:column; align-items:stretch; width:100%; margin-top:40px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .tk.tms-hero .tms-down:hover svg, .tk.tms-hero .tms-down:focus-visible svg{ transform:rotate(90deg); }
+}
+
+/* ---------- why it exists: Bryan on the left, the argument on the right ---------- */
+.tk.tms-inside .tms-why-media{ width:100%; max-width:480px; }
+.tk.tms-inside .tms-why-h{ --fit-w:100%; margin:0 0 34px; }
+.tk.tms-inside .tms-why-copy .tk-lead{ color:rgba(255,255,255,.84); }
+@media (min-width: 901px){ .tk.tms-inside .tms-why-copy .tk-lead{ text-wrap:balance; } }
+.tk.tms-inside .tms-why-copy .tk-body{ margin-top:20px; max-width:600px; }
+
+/* inside the room: six things on hairlines, two columns, outlined numerals */
+.tk.tms-inside .tms-room{ margin-top:136px; display:flex; flex-direction:column; align-items:center; }
+.tk.tms-inside .tms-room-h{ margin-bottom:48px; }
+.tk.tms-inside .tms-room-list{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); column-gap:64px; width:100%; border-bottom:.5px solid var(--tk-line); }
+.tk.tms-inside .tms-room-list > li{ display:grid; grid-template-columns:84px minmax(0,1fr); gap:22px; align-items:start; padding:34px 0 36px; border-top:.5px solid var(--tk-line); }
+.tk.tms-inside .tms-room-list .tk-num{ font-size:56px; line-height:.86; }
+.tk.tms-inside .tms-room-list p{ font-size:15.5px; line-height:1.65; color:var(--tk-dim); text-wrap:pretty; max-width:46ch; }
+.tk.tms-inside .tms-room-list b{ display:block; margin:2px 0 10px; font-family:var(--tk-display); font-weight:400; font-size:23px; line-height:1.12; letter-spacing:.035em; text-transform:uppercase; color:#fff; }
+
+/* go to trenchmadesociety.com: the one gold card on the page */
+.tk.tms-inside .tms-ext{ display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; gap:30px 52px; max-width:960px; margin:120px auto 0; padding:48px 56px 46px; }
+.tk.tms-inside .tms-ext-seal{ grid-row:1 / span 2; align-self:stretch; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding-right:52px; border-right:.5px solid rgba(var(--tk-ant-rgb),.4); }
+.tk.tms-inside .tms-ext-btn{ justify-self:start; }
+.tk.tms-inside .tms-ext-seal svg{ width:40px; height:auto; aspect-ratio:354 / 197; color:var(--tk-ant); }
+.tk.tms-inside .tms-ext-lbl{ font-family:var(--tk-display); font-weight:400; font-size:64px; line-height:.86; letter-spacing:.03em; color:transparent; -webkit-text-stroke:1.4px rgba(var(--tk-gold-rgb),.85); }
+.tk.tms-inside .tms-ext-text{ max-width:none; text-wrap:balance; }
+.tk.tms-inside .tms-ext-text .tk-acc{ white-space:nowrap; }
+
+@media (max-width: 1080px){
+  .tk.tms-inside .tms-ext{ max-width:none; }   /* full width: its edges line up with the list above */
+}
+@media (max-width: 900px){
+  .tk.tms-inside .tms-ext{ gap:28px 44px; padding:44px 44px 40px; }
+  .tk.tms-inside .tms-ext-seal{ padding-right:44px; }
+  .tk.tms-inside .tms-why-copy{ order:-1; }   /* phones and tablets: the argument first, then Bryan */
+  .tk.tms-inside .tms-why-media{ max-width:520px; justify-self:center; margin-top:12px; }
+  .tk.tms-inside .tms-room{ margin-top:112px; }
+  .tk.tms-inside .tms-room-list{ column-gap:40px; }
+  .tk.tms-inside .tms-room-list > li{ grid-template-columns:64px minmax(0,1fr); gap:18px; }
+  .tk.tms-inside .tms-room-list .tk-num{ font-size:46px; }
+}
+@media (max-width: 760px){
+  .tk.tms-inside .tms-room-list{ grid-template-columns:minmax(0,1fr); }
+  .tk.tms-inside .tms-ext{ grid-template-columns:minmax(0,1fr); justify-items:center; text-align:center; gap:28px; margin-top:96px; padding:48px 28px 32px; }
+  .tk.tms-inside .tms-ext-seal{ grid-row:auto; padding:0 0 28px; border-right:0; border-bottom:.5px solid rgba(var(--tk-ant-rgb),.4); min-width:160px; }
+  .tk.tms-inside .tms-ext-btn{ grid-column:auto; justify-self:stretch; }
+  .tk.tms-inside .tms-ext-text{ max-width:22ch; }
+}
+@media (max-width: 560px){
+  .tk.tms-inside .tms-why-media .bw-photo{ aspect-ratio:1 / 1; }
+}
+@media (max-width: 400px){
+  .tk.tms-inside .tms-room-list > li{ grid-template-columns:52px minmax(0,1fr); gap:14px; padding:28px 0 30px; }
+  .tk.tms-inside .tms-room-list .tk-num{ font-size:40px; }
+  .tk.tms-inside .tms-room-list b{ font-size:21px; }
+  .tk.tms-inside .tms-ext{ padding:44px 20px 28px; }
+  .tk.tms-inside .tms-ext-btn{ padding:0 18px; font-size:16px; }
+}
+
+/* ---------- the creed: a soft lamp behind the nine words, the sign-off under them ---------- */
+.tk.tms-creed{ overflow-x:clip; padding-bottom:128px; }
+.tk.tms-creed::before{ content:""; position:absolute; left:50%; top:56%; width:min(1000px, 100%); height:520px; transform:translate(-50%,-50%); pointer-events:none;
+  background:radial-gradient(50% 50% at 50% 50%, rgba(var(--tk-gold-rgb),.07), rgba(var(--tk-gold-rgb),0) 70%); }
+.tk.tms-creed .tk-wrap{ position:relative; }
+.tk.tms-creed .tms-signoff{ margin-top:56px; text-align:center; }
+@media (max-width: 560px){
+  .tk.tms-creed{ padding-bottom:96px; }
+  .tk.tms-creed .tms-signoff{ margin-top:44px; }
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<canvas id="bw-particles" aria-hidden="true"></canvas>
+<a class="bw-skip" href="#main">Skip to content</a>
+
+<!-- ============ SHELL: announcement bar + header (copy to every page; set aria-current on that page's nav link) ============ -->
+<div class="bw-top" id="top"><a href="charlie-company.html#apply">Now accepting Charlie Company partner applications<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></div>
+<header class="bw-hdr">
+  <div class="bw-hdr-in">
+    <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+    <nav class="bw-nav" id="bw-nav" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <a href="charlie-company.html">Charlie Company</a>
+      <a href="trench-made-society.html" aria-current="page">Trench Made</a>
+      <a href="social-hack.html">Social Hack</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="coaching.html">Coaching</a>
+      <a class="bw-nav-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </nav>
+    <a class="bw-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    <button class="bw-menu-btn" type="button" aria-expanded="false" aria-controls="bw-nav" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+<!-- ============ /SHELL ============ -->
+
+<main id="main">
+
+<!-- hero -->
+<section class="tk bw-atmos tms-hero" aria-labelledby="tms-hero-h">
+  <div class="bw-atmos-img" aria-hidden="true"><img src="img/brotherhood.webp" alt="" width="1536" height="1024" fetchpriority="high" decoding="async"></div>
+  <div class="tk-wrap bw-center">
+    <svg class="tms-crown tk-rise" viewBox="0 0 354 197" aria-hidden="true" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg>
+    <p class="tk-cap tk-rise">Trench Made Society</p>
+    <h1 id="tms-hero-h" class="tk-h tk-fit tms-hero-h tk-rise" style="--d:1"><span style="--k:6.6">The room I wish</span><span style="--k:8.1">I had <em class="tk-acc">in year one.</em></span></h1>
+    <p class="tk-lead tms-hero-lead tk-rise" style="--d:2">A brotherhood of blue-collar owners building in public. Real numbers, real systems, real mistakes, and the men who help you fix them.</p>
+    <div class="bw-btns bw-btns--center tk-rise" style="--d:3">
+      <a class="tk-btn tk-btn--solid" href="https://www.trenchmadesociety.com" target="_blank" rel="noopener">Join Trench Made Society<span class="bw-sr"> (opens in a new tab)</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      <a class="tk-btn tms-down" href="#inside">What's inside<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- why it exists + inside the room + go to trenchmadesociety.com -->
+<section class="tk tms-inside" id="inside" aria-labelledby="why-h">
+  <div class="tk-wrap">
+    <div class="bw-split bw-split--center tms-why">
+      <figure class="bw-plate bw-split-a tms-why-media tk-rise">
+        <span class="bw-plate-corners" aria-hidden="true"></span>
+        <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+        <div class="bw-photo bw-photo--trim" style="--ar:4 / 5">
+          <img src="img/bryan-mic-1380.jpg" alt="Bryan Wiggins at the microphone on the In The Trench podcast" width="960" height="1080" loading="lazy" decoding="async" style="object-position:46% 30%">
+        </div>
+      </figure>
+      <div class="bw-split-b tms-why-copy">
+        <p class="tk-cap tk-cap--left tk-rise">Why it exists</p>
+        <h2 id="why-h" class="tk-h tk-fit tms-why-h tk-rise" style="--d:1"><span style="--k:6.9">You're not lazy.</span><span class="tk-acc" style="--k:9.7">You were never taught.</span></h2>
+        <div class="tk-rise" style="--d:2">
+          <p class="tk-lead">Most owners are stuck because nobody taught them the difference between working in the business and working on it.</p>
+          <div class="tk-body"><p>Trench Made Society is where I teach it, using Charlie Company as the live proof. I show the wins, the losses and the work. No highlight reel.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tms-room">
+      <h3 class="tk-cap tms-room-h tk-rise">Inside the room</h3>
+      <ul class="tms-room-list tk-rise" style="--d:1">
+        <li><span class="tk-num" aria-hidden="true">01</span><p><b>Business buckets.</b> Where every dollar goes before you spend it.</p></li>
+        <li><span class="tk-num" aria-hidden="true">02</span><p><b>KPI literacy.</b> Read your numbers like a commander reads a map.</p></li>
+        <li><span class="tk-num" aria-hidden="true">03</span><p><b>Burn per man-hour.</b> Know what every hour on the job really costs you.</p></li>
+        <li><span class="tk-num" aria-hidden="true">04</span><p><b>Practical AI.</b> Tools tested inside Charlie Company before you ever see them.</p></li>
+        <li><span class="tk-num" aria-hidden="true">05</span><p><b>Learning from mistakes.</b> Systematically: mine and yours.</p></li>
+        <li><span class="tk-num" aria-hidden="true">06</span><p><b>Brotherhood.</b> Outside eyes on your offers, pricing, hires and numbers.</p></li>
+      </ul>
+    </div>
+
+    <div class="tk-card tk-card--gold tms-ext tk-rise">
+      <div class="tms-ext-seal">
+        <svg viewBox="0 0 354 197" aria-hidden="true" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg>
+        <span class="tms-ext-lbl">TMS</span>
+      </div>
+      <p class="tk-q tk-q--s tms-ext-text">Membership, courses and live coaching live at <span class="tk-acc">trenchmadesociety.com.</span></p>
+      <a class="tk-btn tk-btn--solid tms-ext-btn" href="https://www.trenchmadesociety.com" target="_blank" rel="noopener">Go to trenchmadesociety.com<span class="bw-sr"> (opens in a new tab)</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- the creed -->
+<section class="tk tms-creed" aria-labelledby="creed-h">
+  <div class="tk-wrap">
+    <div class="bw-head bw-head--center">
+      <p class="tk-cap tk-rise">The Creed</p>
+      <h2 id="creed-h" class="tk-h tk-h--l tk-rise" style="--d:1">What every member lives by.</h2>
+    </div>
+    <ol class="bw-creed tk-rise" style="--d:2">
+      <li><span class="tk-idx">01</span><span class="bw-creed-w">Own</span></li>
+      <li><span class="tk-idx">02</span><span class="bw-creed-w">Vision</span></li>
+      <li><span class="tk-idx">03</span><span class="bw-creed-w">Reps</span></li>
+      <li><span class="tk-idx">04</span><span class="bw-creed-w">Standards</span></li>
+      <li><span class="tk-idx">05</span><span class="bw-creed-w">Systems</span></li>
+      <li><span class="tk-idx">06</span><span class="bw-creed-w">Provide</span></li>
+      <li><span class="tk-idx">07</span><span class="bw-creed-w">Brotherhood</span></li>
+      <li><span class="tk-idx">08</span><span class="bw-creed-w">Faith</span></li>
+      <li><span class="tk-idx">09</span><span class="bw-creed-w">Legacy</span></li>
+    </ol>
+    <p class="bw-signoff tms-signoff tk-rise" style="--d:3">See you in the dirt.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ SHELL: the Trench Report + footer (copy to every page unchanged) ============ -->
+<section class="tk bw-report" aria-labelledby="tr-h">
+  <div class="tk-wrap">
+    <div class="tk-card bw-report-card">
+      <div>
+        <p class="tk-cap tk-cap--left">The Trench Report</p>
+        <h2 id="tr-h" class="tk-h tk-h--m">Straight from the dirt. Every week.</h2>
+        <p class="bw-report-text">One email. What I'm building, what broke, and what I learned fixing it. No fluff, no spam, no selling you a dream.</p>
+      </div>
+      <div>
+        <!-- TODO GHL form -->
+        <form class="bw-form" data-form="report" novalidate>
+          <div class="bw-field">
+            <label class="bw-sr" for="tr-email">Email</label>
+            <div class="bw-inline">
+              <input class="bw-input" id="tr-email" type="email" name="email" placeholder="Your best email" required autocomplete="email" aria-describedby="tr-email-err">
+              <button class="tk-btn tk-btn--solid" type="submit">Get the Report<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></button>
+            </div>
+            <p class="bw-err" id="tr-email-err">Enter a valid email.</p>
+          </div>
+        </form>
+        <div class="bw-ok" id="report-ok" tabindex="-1" hidden><div><b>You're in.</b>First Trench Report hits your inbox this week.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bw-ft">
+  <div class="bw-ft-line" aria-hidden="true"></div>
+  <a class="bw-ft-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 354 197" aria-hidden="true" focusable="false"><path d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></a>
+  <div class="bw-ft-wrap">
+    <div class="bw-ft-grid">
+      <div class="bw-ft-about">
+        <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+        <p>Combat Marine. Serial entrepreneur. Builder of owners. No handouts, no shortcuts: 100% in the trench.</p>
+      </div>
+      <nav class="bw-ft-col" aria-labelledby="ft-work">
+        <p class="bw-ft-h" id="ft-work">Work With Bryan</p>
+        <ul>
+          <li><a href="charlie-company.html">Charlie Company Partner</a></li>
+          <li><a href="trench-made-society.html">Trench Made Society</a></li>
+          <li><a href="social-hack.html">The Social Hack</a></li>
+          <li><a href="coaching.html">1:1 Coaching</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col" aria-labelledby="ft-media">
+        <p class="bw-ft-h" id="ft-media">Media</p>
+        <ul>
+          <li><a href="podcast.html">In The Trench Podcast</a></li>
+          <li><a href="speaking.html">Book Bryan to Speak</a></li>
+          <li><a href="story.html">Bryan's Story</a></li>
+          <li><a href="podcast.html#guest">Be a Guest</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col bw-ft-col--follow" aria-labelledby="ft-follow">
+        <p class="bw-ft-h" id="ft-follow">Follow</p>
+        <ul>
+          <li><a href="https://www.instagram.com/bryan.wiggins" target="_blank" rel="noopener">Instagram @bryan.wiggins<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.trenchmadesociety.com" target="_blank" rel="noopener">trenchmadesociety.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.social-hack.com" target="_blank" rel="noopener">social-hack.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://charliecompany.pro" target="_blank" rel="noopener">charliecompany.pro<span class="bw-sr"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bw-ft-base">
+      <p>&copy; <span data-year>2026</span> In The Trench with Bryan Wiggins. All rights reserved.</p>
+      <p>Results described are Bryan's own experience. Ownership opportunities are offered only through formal agreements.</p>
+    </div>
+  </div>
+</footer>
+<!-- ============ /SHELL ============ -->
+
+<script src="assets/kit.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

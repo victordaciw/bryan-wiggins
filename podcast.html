@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In The Trench Podcast with Bryan Wiggins | It's the Becoming That Makes You Rich</title>
+<meta name="description" content="In The Trench Podcast: raw, story-led conversations about hardship, leadership and becoming. Hosted by Bryan Wiggins.">
+<meta property="og:title" content="In The Trench Podcast with Bryan Wiggins | It's the Becoming That Makes You Rich">
+<meta property="og:description" content="In The Trench Podcast: raw, story-led conversations about hardship, leadership and becoming. Hosted by Bryan Wiggins.">
+<meta property="og:image" content="img/bryan-nara-podcast.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/kit.css">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* podcast.html only. Every selector is scoped under its section's class (pc-*). */
+
+/* ---------- hero ---------- */
+.tk.pc-hero .bw-photo img{ filter:saturate(.46) sepia(.18) contrast(1.06) brightness(.9); }
+
+/* ---------- why this show exists ---------- */
+.tk.pc-why .pc-why-intro{ align-items:end; }
+.tk.pc-why .pc-why-intro .tk-body{ margin-top:20px; }
+.tk.pc-why .pc-why-body{ margin-top:88px; }
+.tk.pc-why .pc-why-quote{ margin:0; padding-left:32px; }
+.tk.pc-why .pc-why-quote blockquote p{ font-size:clamp(26px, 2.8vw, 38px); line-height:1.16; letter-spacing:-.022em; max-width:20ch; }
+.tk.pc-why .pc-why-quote figcaption{ margin-top:22px; }
+.tk.pc-why .pc-why-text .tk-body{ margin-top:44px; padding-top:32px; border-top:.5px solid var(--tk-line); max-width:560px; }
+@media (max-width: 900px){
+  .tk.pc-why .pc-why-body{ margin-top:56px; }
+  .tk.pc-why .pc-why-photo{ max-width:440px; }
+}
+@media (max-width: 560px){
+  .tk.pc-why .pc-why-quote{ padding-left:22px; }
+  .tk.pc-why .pc-why-text .tk-body{ margin-top:36px; padding-top:28px; }
+}
+
+/* ---------- the format (atmosphere: the empty studio, warmed to the site's palette) ---------- */
+.tk.pc-format{ padding-top:152px; padding-bottom:152px; }
+.tk.pc-format .bw-atmos-img img{ filter:saturate(.18) sepia(.42) brightness(.74) contrast(1.06); }
+.tk.pc-format .tk-fit{ margin-top:28px; }
+.tk.pc-format .tk-lead{ margin-top:32px; max-width:600px; text-wrap:balance; color:rgba(255,255,255,.8); }
+@media (max-width: 900px){ .tk.pc-format{ padding-top:112px; padding-bottom:112px; } }
+@media (max-width: 560px){
+  .tk.pc-format .bw-atmos-img img{ opacity:.6; }
+  .tk.pc-format .bw-atmos-img::after{ background:radial-gradient(70% 34% at 50% 62%, rgba(0,0,0,.66), rgba(0,0,0,0)); }
+}
+
+/* ---------- episode lanes: four covers with the library's outlined numerals ---------- */
+.tk.pc-lanes .pc-lane-list{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:24px; }
+.tk.pc-lanes .pc-lane-list > li{ display:flex; }
+.tk.pc-lanes .pc-lane{ display:flex; flex-direction:column; width:100%; padding:0; color:inherit; }
+.tk.pc-lanes .pc-lane-art{ position:relative; overflow:hidden; aspect-ratio:5 / 4; }
+.tk.pc-lanes .pc-lane-art img{ position:absolute; inset:0; width:100%; height:100%; max-width:none; object-fit:cover;
+  filter:grayscale(.8) sepia(.32) contrast(1.06) brightness(.82); transition:transform 1.2s var(--bw-ease); }
+.tk.pc-lanes .pc-lane-art::after{ content:""; position:absolute; inset:0; pointer-events:none;
+  background:var(--tk-grain), linear-gradient(180deg, rgba(14,12,8,.18) 0%, rgba(14,12,8,0) 30%, rgba(16,14,9,.55) 72%, rgba(17,15,10,.96) 100%); }
+.tk.pc-lanes .pc-lane-body{ position:relative; z-index:1; flex:1 1 auto; display:flex; flex-direction:column; align-items:flex-start; padding:0 26px 28px; }
+.tk.pc-lanes .pc-lane-num{ display:block; margin-top:-.5em; font-size:84px; -webkit-text-stroke-color:rgba(var(--tk-gold-rgb),.8); }
+.tk.pc-lanes .pc-lane h3{ margin-top:20px; transition:color .25s; }
+.tk.pc-lanes .pc-lane-text{ margin-top:12px; font-size:15px; line-height:1.6; color:var(--tk-dim); text-wrap:pretty; }
+.tk.pc-lanes .pc-lane-go{ margin-top:auto; padding-top:26px; display:inline-flex; align-items:center; gap:10px; min-height:24px;
+  font-size:11.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--tk-gold); }
+.tk.pc-lanes .pc-lane-go svg{ width:14px; height:14px; transition:transform .25s var(--bw-ease); }
+.tk.pc-lanes .pc-lane:hover{ border-color:rgba(var(--tk-gold-rgb),.45); }
+.tk.pc-lanes .pc-lane:hover .pc-lane-art img{ transform:scale(1.04); }
+.tk.pc-lanes .pc-lane:hover h3, .tk.pc-lanes .pc-lane:focus-visible h3{ color:var(--tk-gold); }
+.tk.pc-lanes .pc-lane:hover .pc-lane-go svg, .tk.pc-lanes .pc-lane:focus-visible .pc-lane-go svg{ transform:translateX(4px); }
+.tk.pc-lanes .pc-lane:focus-visible{ outline:2px solid var(--tk-gold); outline-offset:4px; }
+@media (max-width: 1080px){
+  .tk.pc-lanes .pc-lane-list{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+  .tk.pc-lanes .pc-lane-art{ aspect-ratio:16 / 9; }
+}
+@media (max-width: 640px){
+  .tk.pc-lanes .pc-lane-list{ grid-template-columns:1fr; gap:20px; }
+  .tk.pc-lanes .pc-lane-body{ padding:0 22px 24px; }
+  .tk.pc-lanes .pc-lane-num{ font-size:72px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .tk.pc-lanes .pc-lane-art img, .tk.pc-lanes .pc-lane-go svg{ transition:none; }
+  .tk.pc-lanes .pc-lane:hover .pc-lane-art img{ transform:none; }
+}
+
+/* ---------- be a guest ---------- */
+.tk.pc-guest .pc-guest-copy{ padding-top:12px; }
+.tk.pc-guest .pc-guest-h{ font-size:clamp(36px, 4vw, 56px); line-height:1.04; letter-spacing:-.03em; }
+.tk.pc-guest .pc-guest-h + div{ margin-top:28px; }
+.tk.pc-guest .tk-lead + .tk-body{ margin-top:20px; }
+.tk.pc-guest .pc-guest-alt{ margin-top:48px; padding-top:32px; border-top:.5px solid var(--tk-line); }
+.tk.pc-guest .pc-guest-alt .bw-link{ margin-top:16px; }
+.tk.pc-guest .pc-guest-card{ padding:52px 44px 40px; }
+.tk.pc-guest .pc-guest-card .bw-ok{ padding:4px 0; border:0; background:none; font-size:16.5px; }
+.tk.pc-guest .bw-form-note{ text-wrap:pretty; }
+.tk.pc-guest .bw-field > label{ text-wrap:balance; }
+@media (min-width: 901px) and (max-width: 1180px){
+  .tk.pc-guest .bw-form-grid{ grid-template-columns:minmax(0,1fr); }
+  .tk.pc-guest .pc-guest-card{ padding:48px 32px 36px; }
+}
+@media (max-width: 900px){
+  .tk.pc-guest .pc-guest-copy{ padding-top:0; }
+  .tk.pc-guest .bw-split{ row-gap:64px; }
+}
+@media (max-width: 560px){
+  .tk.pc-guest .pc-guest-card{ padding:44px 20px 30px; }
+  .tk.pc-guest .pc-guest-alt{ margin-top:40px; }
+}
+</style>
+</head>
+<body>
+<canvas id="bw-particles" aria-hidden="true"></canvas>
+<a class="bw-skip" href="#main">Skip to content</a>
+
+<!-- ============ SHELL: announcement bar + header (copy to every page; set aria-current on that page's nav link) ============ -->
+<div class="bw-top" id="top"><a href="charlie-company.html#apply">Now accepting Charlie Company partner applications<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></div>
+<header class="bw-hdr">
+  <div class="bw-hdr-in">
+    <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+    <nav class="bw-nav" id="bw-nav" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <a href="charlie-company.html">Charlie Company</a>
+      <a href="trench-made-society.html">Trench Made</a>
+      <a href="social-hack.html">Social Hack</a>
+      <a href="podcast.html" aria-current="page">Podcast</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="coaching.html">Coaching</a>
+      <a class="bw-nav-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </nav>
+    <a class="bw-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    <button class="bw-menu-btn" type="button" aria-expanded="false" aria-controls="bw-nav" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+<!-- ============ /SHELL ============ -->
+
+<main id="main">
+
+<!-- hero -->
+<section class="tk bw-hero pc-hero" aria-labelledby="hero-h">
+  <div class="tk-wrap">
+    <p class="tk-cap tk-cap--left tk-rise">In The Trench Podcast</p>
+    <h1 id="hero-h" class="tk-h tk-fit bw-hero-h tk-rise" style="--d:1"><span style="--k:7.6">It's the becoming</span><span class="tk-acc" style="--k:9">that makes you rich.</span></h1>
+    <div class="bw-hero-body">
+      <div class="bw-hero-copy tk-rise" style="--d:2">
+        <i class="bw-bar" aria-hidden="true"></i>
+        <p class="tk-lead">Raw, unscripted stories from men and women who went down before they went up, and what it built in them.</p>
+        <div class="bw-btns">
+          <a class="tk-btn tk-btn--solid" href="https://trenchmadesociety.com/trench-podcast-guest" target="_blank" rel="noopener">Be a Guest<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg><span class="bw-sr"> (opens in a new tab)</span></a>
+          <a class="tk-btn" href="https://www.youtube.com/@Inthetrench-podcast" target="_blank" rel="noopener">Watch the clips<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg><span class="bw-sr"> (opens in a new tab)</span></a>
+        </div>
+      </div>
+      <figure class="bw-plate bw-hero-media tk-rise" style="--d:3">
+        <span class="bw-plate-corners" aria-hidden="true"></span>
+        <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+        <div class="bw-photo" style="--ar:3 / 2">
+          <img src="img/bryan-nara-podcast.jpg" alt="Nara and Bryan Wiggins at their microphones on the In The Trench podcast" width="1920" height="1080" fetchpriority="high" decoding="async" style="object-position:50% 30%">
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- why this show exists -->
+<section class="tk pc-why" aria-labelledby="why-h">
+  <div class="tk-wrap">
+    <div class="bw-intro pc-why-intro">
+      <div>
+        <p class="tk-cap tk-cap--left tk-rise">Why this show exists</p>
+        <h2 id="why-h" class="tk-h tk-h--l tk-rise" style="--d:1">Chasing money will never get you there.</h2>
+      </div>
+      <div class="tk-rise" style="--d:2">
+        <p class="tk-lead">Once you become, money follows. Most people do it in reverse: they chase money and never become.</p>
+        <div class="tk-body"><p>The trench mindset means chasing the journey instead of the destination. Seek first, and everything else gets added, like Matthew 6 says.</p></div>
+      </div>
+    </div>
+
+    <div class="bw-split bw-split--center pc-why-body">
+      <figure class="bw-plate bw-split-a pc-why-photo tk-rise" style="--d:2">
+        <span class="bw-plate-corners" aria-hidden="true"></span>
+        <div class="bw-photo bw-photo--trim" style="--ar:4 / 5">
+          <img src="img/bryan-mic-1380.jpg" alt="Bryan Wiggins listening at the microphone on the In The Trench podcast" width="960" height="1080" loading="lazy" decoding="async" style="object-position:40% 30%">
+        </div>
+      </figure>
+      <div class="bw-split-b pc-why-text tk-rise" style="--d:3">
+        <figure class="bw-quote pc-why-quote">
+          <blockquote><p>&ldquo;If the house was the destination, you'd be empty the day you got the keys.&rdquo;</p></blockquote>
+          <figcaption>Bryan Wiggins</figcaption>
+        </figure>
+        <div class="tk-body">
+          <p>People in six-million-dollar homes get bored of them. But if they're busy, building and fulfilled, it's just the place they call home: they enjoy it like they enjoyed the small one.</p>
+          <p>The goal is to become so valuable that money stops mattering. Buy the big house, get bored, sell it, buy another. The car, the truck, the house: that stuff passes away. The man you became doesn't.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- the format -->
+<section class="tk bw-atmos pc-format" aria-labelledby="format-h">
+  <div class="bw-atmos-img" aria-hidden="true"><img src="img/podcast.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async"></div>
+  <div class="tk-wrap bw-center">
+    <p class="tk-cap tk-rise">The format</p>
+    <h2 id="format-h" class="tk-h tk-fit tk-rise" style="--fit-w:760px;--d:1"><span style="--k:11.4">Every episode starts with</span><span class="tk-acc" style="--k:6.6">&ldquo;Imagine you&hellip;&rdquo;</span></h2>
+    <p class="tk-lead tk-rise" style="--d:2">We open inside the guest's lowest moment before you know who they are. Then we dig out the story, name the lesson, and turn it back on you.</p>
+  </div>
+</section>
+
+<!-- episode lanes -->
+<section class="tk pc-lanes" aria-labelledby="lanes-h">
+  <div class="tk-wrap">
+    <div class="bw-head">
+      <p class="tk-cap tk-cap--left tk-rise">Episode lanes</p>
+      <h2 id="lanes-h" class="tk-h tk-h--l tk-rise" style="--d:1">What we dig into.</h2>
+    </div>
+    <ol class="pc-lane-list">
+      <li class="tk-rise" style="--d:2">
+        <a class="tk-card pc-lane" href="https://www.youtube.com/@Inthetrench-podcast" target="_blank" rel="noopener">
+          <div class="pc-lane-art" aria-hidden="true"><img src="img/hero.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async" style="object-position:38% 50%"></div>
+          <div class="pc-lane-body">
+            <span class="tk-num pc-lane-num" aria-hidden="true">01</span>
+            <h3 class="tk-h tk-h--s">Trench stories</h3>
+            <p class="pc-lane-text">The bottom, the turning point and the climb.</p>
+            <span class="pc-lane-go">Watch<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg><span class="bw-sr"> (opens in a new tab)</span></span>
+          </div>
+        </a>
+      </li>
+      <li class="tk-rise" style="--d:3">
+        <a class="tk-card pc-lane" href="https://www.youtube.com/@Inthetrench-podcast" target="_blank" rel="noopener">
+          <div class="pc-lane-art" aria-hidden="true"><img src="img/partners.webp" alt="" width="1100" height="733" loading="lazy" decoding="async" style="object-position:48% 50%"></div>
+          <div class="pc-lane-body">
+            <span class="tk-num pc-lane-num" aria-hidden="true">02</span>
+            <h3 class="tk-h tk-h--s">Operator to owner</h3>
+            <p class="pc-lane-text">Why harder labor alone never creates freedom, with Stephen Daniels and the men who made the jump.</p>
+            <span class="pc-lane-go">Watch<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg><span class="bw-sr"> (opens in a new tab)</span></span>
+          </div>
+        </a>
+      </li>
+      <li class="tk-rise" style="--d:4">
+        <a class="tk-card pc-lane" href="https://www.youtube.com/@Inthetrench-podcast" target="_blank" rel="noopener">
+          <div class="pc-lane-art" aria-hidden="true"><img src="img/family.webp" alt="" width="1100" height="733" loading="lazy" decoding="async" style="object-position:56% 50%"></div>
+          <div class="pc-lane-body">
+            <span class="tk-num pc-lane-num" aria-hidden="true">03</span>
+            <h3 class="tk-h tk-h--s">Being a man &amp; provider</h3>
+            <p class="pc-lane-text">Marriage, fatherhood, faith and the cost of success.</p>
+            <span class="pc-lane-go">Watch<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg><span class="bw-sr"> (opens in a new tab)</span></span>
+          </div>
+        </a>
+      </li>
+      <li class="tk-rise" style="--d:5">
+        <a class="tk-card pc-lane" href="https://www.youtube.com/@Inthetrench-podcast" target="_blank" rel="noopener">
+          <div class="pc-lane-art" aria-hidden="true"><img src="img/coaching.webp" alt="" width="1100" height="733" loading="lazy" decoding="async" style="object-position:50% 50%"></div>
+          <div class="pc-lane-body">
+            <span class="tk-num pc-lane-num" aria-hidden="true">04</span>
+            <h3 class="tk-h tk-h--s">Business in the dirt</h3>
+            <p class="pc-lane-text">Numbers, hiring, sales and the mistakes that cost real money.</p>
+            <span class="pc-lane-go">Watch<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg><span class="bw-sr"> (opens in a new tab)</span></span>
+          </div>
+        </a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- be a guest -->
+<section class="tk pc-guest" id="guest" aria-labelledby="guest-h">
+  <div class="tk-wrap bw-split">
+    <div class="bw-split-a pc-guest-copy">
+      <p class="tk-cap tk-cap--left tk-rise">Be a guest</p>
+      <h2 id="guest-h" class="tk-q pc-guest-h tk-rise" style="--d:1">Got a trench story?</h2>
+      <div class="tk-rise" style="--d:2">
+        <p class="tk-lead">We want the real one: the hardship, the failed attempts, the turning point and where you are now.</p>
+        <div class="tk-body"><p>Every story is checked before we record. If it's real, we'll tell it right.</p></div>
+      </div>
+      <div class="pc-guest-alt tk-rise" style="--d:3">
+        <p class="tk-q tk-q--s">Want Bryan on your show instead?</p>
+        <a class="bw-link" href="speaking.html#book">Book him for your podcast<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      </div>
+    </div>
+    <div class="bw-split-b tk-rise" style="--d:2">
+      <div class="tk-card tk-card--gold pc-guest-card">
+        <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+        <!-- TODO GHL form -->
+        <form class="bw-form" data-form="guest" novalidate>
+          <div class="bw-form-grid">
+            <div class="bw-field">
+              <label for="guest-name">Full name *</label>
+              <input class="bw-input" id="guest-name" type="text" name="name" required autocomplete="name" aria-describedby="guest-name-err">
+              <p class="bw-err" id="guest-name-err">Required.</p>
+            </div>
+            <div class="bw-field">
+              <label for="guest-email">Email *</label>
+              <input class="bw-input" id="guest-email" type="email" name="email" required autocomplete="email" aria-describedby="guest-email-err">
+              <p class="bw-err" id="guest-email-err">Required.</p>
+            </div>
+            <div class="bw-field">
+              <label for="guest-social">Instagram / social link *</label>
+              <input class="bw-input" id="guest-social" type="text" name="social" required aria-describedby="guest-social-err">
+              <p class="bw-err" id="guest-social-err">Required.</p>
+            </div>
+            <div class="bw-field">
+              <label for="guest-role">What you do *</label>
+              <input class="bw-input" id="guest-role" type="text" name="role" required aria-describedby="guest-role-err">
+              <p class="bw-err" id="guest-role-err">Required.</p>
+            </div>
+            <div class="bw-field bw-field--full">
+              <label for="guest-story">Your trench story in a few lines: the bottom and the climb *</label>
+              <textarea class="bw-input" id="guest-story" name="story" required aria-describedby="guest-story-err"></textarea>
+              <p class="bw-err" id="guest-story-err">Required.</p>
+            </div>
+          </div>
+          <div class="bw-form-act"><button class="tk-btn tk-btn--solid" type="submit">Pitch My Story<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></button></div>
+          <p class="bw-form-note">Every application is read by Bryan's team. Expect a reply within two business days.</p>
+        </form>
+        <div class="bw-ok" id="guest-ok" tabindex="-1" hidden><div><b>Story received.</b>If it's a fit, our team will reach out to schedule a pre-call.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ SHELL: the Trench Report + footer (copy to every page unchanged) ============ -->
+<section class="tk bw-report" aria-labelledby="tr-h">
+  <div class="tk-wrap">
+    <div class="tk-card bw-report-card">
+      <div>
+        <p class="tk-cap tk-cap--left">The Trench Report</p>
+        <h2 id="tr-h" class="tk-h tk-h--m">Straight from the dirt. Every week.</h2>
+        <p class="bw-report-text">One email. What I'm building, what broke, and what I learned fixing it. No fluff, no spam, no selling you a dream.</p>
+      </div>
+      <div>
+        <!-- TODO GHL form -->
+        <form class="bw-form" data-form="report" novalidate>
+          <div class="bw-field">
+            <label class="bw-sr" for="tr-email">Email</label>
+            <div class="bw-inline">
+              <input class="bw-input" id="tr-email" type="email" name="email" placeholder="Your best email" required autocomplete="email" aria-describedby="tr-email-err">
+              <button class="tk-btn tk-btn--solid" type="submit">Get the Report<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></button>
+            </div>
+            <p class="bw-err" id="tr-email-err">Enter a valid email.</p>
+          </div>
+        </form>
+        <div class="bw-ok" id="report-ok" tabindex="-1" hidden><div><b>You're in.</b>First Trench Report hits your inbox this week.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bw-ft">
+  <div class="bw-ft-line" aria-hidden="true"></div>
+  <a class="bw-ft-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 354 197" aria-hidden="true" focusable="false"><path d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></a>
+  <div class="bw-ft-wrap">
+    <div class="bw-ft-grid">
+      <div class="bw-ft-about">
+        <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+        <p>Combat Marine. Serial entrepreneur. Builder of owners. No handouts, no shortcuts: 100% in the trench.</p>
+      </div>
+      <nav class="bw-ft-col" aria-labelledby="ft-work">
+        <p class="bw-ft-h" id="ft-work">Work With Bryan</p>
+        <ul>
+          <li><a href="charlie-company.html">Charlie Company Partner</a></li>
+          <li><a href="trench-made-society.html">Trench Made Society</a></li>
+          <li><a href="social-hack.html">The Social Hack</a></li>
+          <li><a href="coaching.html">1:1 Coaching</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col" aria-labelledby="ft-media">
+        <p class="bw-ft-h" id="ft-media">Media</p>
+        <ul>
+          <li><a href="podcast.html">In The Trench Podcast</a></li>
+          <li><a href="speaking.html">Book Bryan to Speak</a></li>
+          <li><a href="story.html">Bryan's Story</a></li>
+          <li><a href="podcast.html#guest">Be a Guest</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col bw-ft-col--follow" aria-labelledby="ft-follow">
+        <p class="bw-ft-h" id="ft-follow">Follow</p>
+        <ul>
+          <li><a href="https://www.instagram.com/bryan.wiggins" target="_blank" rel="noopener">Instagram @bryan.wiggins<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.trenchmadesociety.com" target="_blank" rel="noopener">trenchmadesociety.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.social-hack.com" target="_blank" rel="noopener">social-hack.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://charliecompany.pro" target="_blank" rel="noopener">charliecompany.pro<span class="bw-sr"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bw-ft-base">
+      <p>&copy; <span data-year>2026</span> In The Trench with Bryan Wiggins. All rights reserved.</p>
+      <p>Results described are Bryan's own experience. Ownership opportunities are offered only through formal agreements.</p>
+    </div>
+  </div>
+</footer>
+<!-- ============ /SHELL ============ -->
+
+<script src="assets/kit.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

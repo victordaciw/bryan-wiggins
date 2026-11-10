@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Social Hack | Founded by Bryan Wiggins, Led by Creative Director Nara Wiggins</title>
+<meta name="description" content="The Social Hack builds branding, content and visibility for service businesses. Founded by Bryan Wiggins; Creative Director Nara Wiggins runs the team.">
+<meta property="og:title" content="The Social Hack | Founded by Bryan Wiggins, Led by Creative Director Nara Wiggins">
+<meta property="og:description" content="The Social Hack builds branding, content and visibility for service businesses. Founded by Bryan Wiggins; Creative Director Nara Wiggins runs the team.">
+<meta property="og:image" content="img/bryan-nara-podcast.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/kit.css">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+/* ==========================================================================================
+   THE SOCIAL HACK page only. Every selector is scoped under its section's own class.
+   ========================================================================================== */
+
+/* ---------- hero: a centred two-line statement over the studio, desaturated to the site's palette ---------- */
+.tk.sh-hero{ padding-top:128px; padding-bottom:136px; }
+.tk.sh-hero .bw-atmos-img img{ opacity:.8; object-position:50% 46%; filter:grayscale(1) sepia(.34) brightness(.86) contrast(1.1); }
+.tk.sh-hero .sh-hero-h{ --fit-w:900px; margin-top:30px; }
+.tk.sh-hero .sh-hero-lead{ margin-top:38px; max-width:600px; text-wrap:balance; color:rgba(255,255,255,.84); }
+.tk.sh-hero .bw-btns{ margin-top:46px; }
+.tk.sh-hero .sh-down svg{ transform:rotate(90deg); }
+.tk.sh-hero .sh-down:hover svg, .tk.sh-hero .sh-down:focus-visible svg{ transform:rotate(90deg) translateX(3px); }
+@media (max-width: 560px){
+  .tk.sh-hero{ padding-top:80px; padding-bottom:96px; }
+  .tk.sh-hero .bw-btns{ flex-direction:column; align-items:stretch; width:100%; }
+}
+@media (prefers-reduced-motion: reduce){
+  .tk.sh-hero .sh-down:hover svg, .tk.sh-hero .sh-down:focus-visible svg{ transform:rotate(90deg); }
+}
+
+/* ---------- who runs it: copy + roster on the left, the real photo on the right ---------- */
+.tk.sh-team .sh-team-h{ --fit-w:100%; margin:0 0 32px; }
+.tk.sh-team .sh-team-copy .tk-body{ margin-top:20px; }
+.tk.sh-team .sh-roster{ container-type:inline-size; margin:40px 0 0; border-top:.5px solid var(--tk-line); }
+.tk.sh-team .sh-roster > div{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px 24px; padding:18px 0 17px; border-bottom:.5px solid var(--tk-line); }
+.tk.sh-team .sh-roster dt{ font-family:var(--tk-display); font-weight:400; font-size:24px; line-height:1.1; letter-spacing:.03em; text-transform:uppercase; color:#fff; }
+.tk.sh-team .sh-roster dd{ margin:0; font-size:11px; font-weight:700; line-height:1.4; letter-spacing:.2em; text-transform:uppercase; color:var(--tk-ant); }
+/* a narrow column stacks both rows the same way (name, then role), never one inline and one wrapped */
+@container (max-width: 460px){
+  .tk.sh-team .sh-roster > div{ flex-direction:column; align-items:flex-start; }
+}
+
+/* what they build / who it's for: two pricing cards */
+.tk.sh-team .sh-offer{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:24px; align-items:stretch; margin-top:120px; }
+.tk.sh-team .sh-offer > .tk-card{ padding:44px 40px 34px; }
+.tk.sh-team .sh-offer-top{ display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:26px; }
+.tk.sh-team .sh-offer-top .tk-num{ font-size:56px; }
+.tk.sh-team .sh-offer .tk-list li{ font-size:16.5px; text-wrap:pretty; }
+.tk.sh-team .sh-nb{ white-space:nowrap; }
+
+@media (max-width: 900px){
+  .tk.sh-team .sh-offer{ grid-template-columns:1fr; gap:52px; margin-top:96px; }
+}
+@media (max-width: 400px){
+  .tk.sh-team .sh-offer > .tk-card{ padding:40px 20px 26px; }
+  .tk.sh-team .sh-offer-top .tk-num{ font-size:46px; }
+}
+
+/* ---------- go to social-hack.com: the SH seal, the line, the button ---------- */
+.tk.sh-cta{ padding-top:104px; }
+.tk.sh-cta .sh-seal{ display:grid; place-items:center; width:76px; height:76px; margin:8px 0 48px; transform:rotate(45deg);
+  border:1px solid rgba(var(--tk-gold-rgb),.7); background:rgba(13,12,9,.7);
+  box-shadow:0 0 0 7px rgba(13,12,9,.55), 0 0 0 8px rgba(var(--tk-ant-rgb),.35), 0 0 46px rgba(var(--tk-gold-rgb),.18); }
+.tk.sh-cta .sh-seal span{ display:block; transform:rotate(-45deg); font-family:var(--tk-display); font-size:30px; line-height:1; letter-spacing:.04em; color:var(--tk-gold); }
+.tk.sh-cta .sh-cta-q{ max-width:760px; font-size:clamp(26px, 3.2vw, 44px); }
+.tk.sh-cta .bw-btns{ margin-top:44px; }
+@media (max-width: 560px){
+  .tk.sh-cta .sh-seal{ width:64px; height:64px; margin-bottom:40px; }
+  .tk.sh-cta .sh-seal span{ font-size:26px; }
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<canvas id="bw-particles" aria-hidden="true"></canvas>
+<a class="bw-skip" href="#main">Skip to content</a>
+
+<!-- ============ SHELL: announcement bar + header (copy to every page; set aria-current on that page's nav link) ============ -->
+<div class="bw-top" id="top"><a href="charlie-company.html#apply">Now accepting Charlie Company partner applications<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></div>
+<header class="bw-hdr">
+  <div class="bw-hdr-in">
+    <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+    <nav class="bw-nav" id="bw-nav" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <a href="charlie-company.html">Charlie Company</a>
+      <a href="trench-made-society.html">Trench Made</a>
+      <a href="social-hack.html" aria-current="page">Social Hack</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="coaching.html">Coaching</a>
+      <a class="bw-nav-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </nav>
+    <a class="bw-cta" href="index.html#work">Work With Bryan<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    <button class="bw-menu-btn" type="button" aria-expanded="false" aria-controls="bw-nav" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+<!-- ============ /SHELL ============ -->
+
+<main id="main">
+
+<!-- hero -->
+<section class="tk bw-atmos sh-hero" aria-labelledby="sh-hero-h">
+  <div class="bw-atmos-img" aria-hidden="true"><img src="img/podcast.webp" alt="" width="1536" height="1024" fetchpriority="high" decoding="async"></div>
+  <div class="tk-wrap bw-center">
+    <p class="tk-cap tk-rise">The Social Hack</p>
+    <h1 id="sh-hero-h" class="tk-h tk-fit sh-hero-h tk-rise" style="--d:1"><span style="--k:7.2">Attention first.</span><span class="tk-acc" style="--k:7.4">Then conversion.</span></h1>
+    <p class="tk-lead sh-hero-lead tk-rise" style="--d:2">The Social Hack builds the brand, content and visibility that make service businesses impossible to ignore, then the systems that turn that attention into booked work.</p>
+    <div class="bw-btns bw-btns--center tk-rise" style="--d:3">
+      <a class="tk-btn tk-btn--solid" href="https://www.social-hack.com" target="_blank" rel="noopener">Visit The Social Hack<span class="bw-sr"> (opens in a new tab)</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      <a class="tk-btn sh-down" href="#team">Who runs it<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- who runs it -->
+<section class="tk sh-team" id="team" aria-labelledby="team-h">
+  <div class="tk-wrap">
+    <div class="bw-split bw-split--center">
+      <div class="bw-split-a sh-team-copy">
+        <p class="tk-cap tk-cap--left tk-rise">Husband. Wife. Agency.</p>
+        <h2 id="team-h" class="tk-h tk-fit sh-team-h tk-rise" style="--d:1"><span style="--k:8.4">I build the brand.</span><span class="tk-acc" style="--k:8.9">Nara runs the team.</span></h2>
+        <div class="tk-rise" style="--d:2">
+          <p class="tk-lead">I'm the founder and brand builder. My wife, Nara Wiggins, is the Creative Director: she runs the entire Social Hack team.</p>
+          <div class="tk-body"><p>We learned this together in Brazil, then tested it on our own companies first. The same playbook that built the Charlie Company audience is what The Social Hack runs for service businesses.</p></div>
+        </div>
+        <dl class="sh-roster tk-rise" style="--d:3">
+          <div><dt>Bryan Wiggins</dt><dd>Founder&nbsp;· Brand Builder</dd></div>
+          <div><dt>Nara Wiggins</dt><dd>Creative Director&nbsp;· Runs the Team</dd></div>
+        </dl>
+      </div>
+      <figure class="bw-plate bw-split-b sh-team-media tk-rise" style="--d:2">
+        <span class="bw-plate-corners" aria-hidden="true"></span>
+        <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+        <div class="bw-photo" style="--ar:5 / 4">
+          <img src="img/bryan-nara-podcast.jpg" alt="Nara and Bryan Wiggins at their microphones on the In The Trench podcast" width="1920" height="1080" loading="lazy" decoding="async" style="object-position:46% 50%">
+        </div>
+        <figcaption class="bw-plate-cap">Bryan and Nara on In The Trench</figcaption>
+      </figure>
+    </div>
+
+    <div class="sh-offer">
+      <article class="tk-card tk-card--gold sh-offer-card tk-rise" aria-labelledby="build-h">
+        <span class="tk-medal" aria-hidden="true"><svg viewBox="0 0 354 197" focusable="false"><path fill="currentColor" d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></span>
+        <div class="sh-offer-top"><h3 id="build-h" class="tk-h tk-h--s">What they build</h3><span class="tk-num" aria-hidden="true">01</span></div>
+        <ul class="tk-list tk-list--ruled tk-list--solid">
+          <li>Brand identity and positioning</li>
+          <li>Short-form content and <span class="sh-nb">personal-brand</span> media</li>
+          <li>Visibility and authority across social</li>
+          <li>Ads and lead capture behind the attention</li>
+        </ul>
+      </article>
+      <article class="tk-card sh-offer-card tk-rise" style="--d:1" aria-labelledby="for-h">
+        <div class="sh-offer-top"><h3 id="for-h" class="tk-h tk-h--s">Who it's for</h3><span class="tk-num" aria-hidden="true">02</span></div>
+        <ul class="tk-list tk-list--ruled">
+          <li>Contractors and <span class="sh-nb">home-service</span> owners</li>
+          <li>Coaches, lawyers, cleaners and other service businesses</li>
+          <li>Owners who are the best-kept secret in their city</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- go to social-hack.com -->
+<section class="tk bw-final sh-cta" aria-labelledby="sh-cta-h">
+  <div class="tk-wrap bw-center">
+    <div class="sh-seal tk-rise" aria-hidden="true"><span>SH</span></div>
+    <h2 id="sh-cta-h" class="tk-q sh-cta-q tk-rise" style="--d:1">Services, case studies and audits live at <em class="tk-acc">social-hack.com.</em></h2>
+    <div class="bw-btns bw-btns--center tk-rise" style="--d:2">
+      <a class="tk-btn tk-btn--solid" href="https://www.social-hack.com" target="_blank" rel="noopener">Go to social-hack.com<span class="bw-sr"> (opens in a new tab)</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ SHELL: the Trench Report + footer (copy to every page unchanged) ============ -->
+<section class="tk bw-report" aria-labelledby="tr-h">
+  <div class="tk-wrap">
+    <div class="tk-card bw-report-card">
+      <div>
+        <p class="tk-cap tk-cap--left">The Trench Report</p>
+        <h2 id="tr-h" class="tk-h tk-h--m">Straight from the dirt. Every week.</h2>
+        <p class="bw-report-text">One email. What I'm building, what broke, and what I learned fixing it. No fluff, no spam, no selling you a dream.</p>
+      </div>
+      <div>
+        <!-- TODO GHL form -->
+        <form class="bw-form" data-form="report" novalidate>
+          <div class="bw-field">
+            <label class="bw-sr" for="tr-email">Email</label>
+            <div class="bw-inline">
+              <input class="bw-input" id="tr-email" type="email" name="email" placeholder="Your best email" required autocomplete="email" aria-describedby="tr-email-err">
+              <button class="tk-btn tk-btn--solid" type="submit">Get the Report<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></button>
+            </div>
+            <p class="bw-err" id="tr-email-err">Enter a valid email.</p>
+          </div>
+        </form>
+        <div class="bw-ok" id="report-ok" tabindex="-1" hidden><div><b>You're in.</b>First Trench Report hits your inbox this week.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bw-ft">
+  <div class="bw-ft-line" aria-hidden="true"></div>
+  <a class="bw-ft-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 354 197" aria-hidden="true" focusable="false"><path d="M176.7 1L178.1 2L219.8 87L186.5 112L186.6 126L189.6 142L194.7 153L202.1 162L213 169.5L224 173.3L233 174.6L248 174.4L265 171.2L282 163.2L299.3 148L312.2 129L320.7 108L295.6 80L353 32.1L353.3 38L335.7 196L19 196.1L18 195.1L.7 38L.9 31L57.7 80L33.5 108L36.7 120L41.7 132L53 148.6L66 160.3L83 169.3L105 174.4L125 174.2L137 171.3L150 163.4L158 154L164.3 140L166.3 131L167 113L134.8 86Z"/></svg></a>
+  <div class="bw-ft-wrap">
+    <div class="bw-ft-grid">
+      <div class="bw-ft-about">
+        <a class="bw-brand tk-fit" href="index.html" aria-label="In The Trench with Bryan Wiggins, home"><span class="bw-brand-sm" style="--k:15.6">In The Trench with</span><span class="bw-brand-lg" style="--k:6.4">Bryan Wiggins</span></a>
+        <p>Combat Marine. Serial entrepreneur. Builder of owners. No handouts, no shortcuts: 100% in the trench.</p>
+      </div>
+      <nav class="bw-ft-col" aria-labelledby="ft-work">
+        <p class="bw-ft-h" id="ft-work">Work With Bryan</p>
+        <ul>
+          <li><a href="charlie-company.html">Charlie Company Partner</a></li>
+          <li><a href="trench-made-society.html">Trench Made Society</a></li>
+          <li><a href="social-hack.html">The Social Hack</a></li>
+          <li><a href="coaching.html">1:1 Coaching</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col" aria-labelledby="ft-media">
+        <p class="bw-ft-h" id="ft-media">Media</p>
+        <ul>
+          <li><a href="podcast.html">In The Trench Podcast</a></li>
+          <li><a href="speaking.html">Book Bryan to Speak</a></li>
+          <li><a href="story.html">Bryan's Story</a></li>
+          <li><a href="podcast.html#guest">Be a Guest</a></li>
+        </ul>
+      </nav>
+      <nav class="bw-ft-col bw-ft-col--follow" aria-labelledby="ft-follow">
+        <p class="bw-ft-h" id="ft-follow">Follow</p>
+        <ul>
+          <li><a href="https://www.instagram.com/bryan.wiggins" target="_blank" rel="noopener">Instagram @bryan.wiggins<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.trenchmadesociety.com" target="_blank" rel="noopener">trenchmadesociety.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.social-hack.com" target="_blank" rel="noopener">social-hack.com<span class="bw-sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://charliecompany.pro" target="_blank" rel="noopener">charliecompany.pro<span class="bw-sr"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bw-ft-base">
+      <p>&copy; <span data-year>2026</span> In The Trench with Bryan Wiggins. All rights reserved.</p>
+      <p>Results described are Bryan's own experience. Ownership opportunities are offered only through formal agreements.</p>
+    </div>
+  </div>
+</footer>
+<!-- ============ /SHELL ============ -->
+
+<script src="assets/kit.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

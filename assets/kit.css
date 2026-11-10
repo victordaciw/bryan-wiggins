@@ -1,0 +1,166 @@
+/* ==========================================================================================
+   TRENCH KIT (tk-): shared primitives for the new sections, distilled from the approved
+   pricing (.tms-pr), outcomes (.lx) and footer (.tms-ft) sections. Section CSS may only add
+   layout on top of these; it must not invent new colors, fonts, borders or bullets.
+   ========================================================================================== */
+.tk{
+  --tk-gold:#F9C228; --tk-gold-rgb:249,194,40;
+  --tk-ant:#C8A05E;  --tk-ant-rgb:200,160,94;
+  --tk-text:#e9e9ec; --tk-soft:rgba(255,255,255,.74); --tk-dim:#a2a6ae; --tk-mute:#8a8f98; --tk-faint:#62666d;
+  --tk-hair:rgba(255,255,255,.09); --tk-line:#23252a;
+  --tk-grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .92 0 0 0 0 .8 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --tk-display:'Anton','Inter',sans-serif;
+  --tk-mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+  position:relative; z-index:10; padding:112px 24px;
+  color:var(--tk-text); font-family:'Inter',system-ui,-apple-system,sans-serif; line-height:1.5;
+}
+.tk *, .tk *::before, .tk *::after{ box-sizing:border-box; }
+.tk h2, .tk h3, .tk h4, .tk p, .tk ul, .tk ol, .tk figure, .tk blockquote{ margin:0; padding:0; }
+.tk ul, .tk ol{ list-style:none; }
+.tk a{ text-decoration:none; color:inherit; -webkit-tap-highlight-color:transparent; }
+.tk svg{ display:block; }
+.tk .tk-sr{ position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+.tk .tk-wrap{ max-width:1200px; margin:0 auto; }
+.tk .tk-wrap--narrow{ max-width:860px; }
+.tk--tight{ padding-top:72px; padding-bottom:72px; }        /* for a section that continues the previous one */
+
+/* ---------- caption: small antique capitals between hairlines (the pricing "THREE WAYS IN") ---------- */
+.tk .tk-cap{ display:inline-flex; align-items:center; gap:14px; font-size:11.5px; font-weight:700; line-height:1; letter-spacing:.28em; text-transform:uppercase; color:var(--tk-ant); }
+.tk .tk-cap::before, .tk .tk-cap::after{ content:""; display:block; width:40px; height:1px; background:linear-gradient(90deg, rgba(var(--tk-ant-rgb),0), rgba(var(--tk-ant-rgb),.85)); }
+.tk .tk-cap::after{ transform:scaleX(-1); margin-left:-.28em; }
+.tk .tk-cap--left::after{ display:none; }                      /* left-aligned sections: one leading hairline */
+
+/* ---------- display headings: Anton capitals (hero / pricing family) ---------- */
+.tk .tk-h{ font-family:var(--tk-display); font-weight:400; text-transform:uppercase; line-height:.98; letter-spacing:.005em; color:#fff; text-wrap:balance; }
+.tk .tk-h--xl{ font-size:clamp(44px, 6.2vw, 90px); }
+.tk .tk-h--l { font-size:clamp(36px, 4.6vw, 66px); }
+.tk .tk-h--m { font-size:clamp(28px, 3vw, 42px); line-height:1.04; }
+.tk .tk-h--s { font-size:26px; line-height:1.08; letter-spacing:.03em; }
+.tk .tk-h--xs{ font-size:20px; line-height:1.15; letter-spacing:.04em; }
+.tk .tk-acc{ color:var(--tk-gold); font-style:normal; }       /* the gold accent inside a heading */
+.tk .tk-ant{ color:var(--tk-ant); font-style:normal; }
+
+/* Equal-width lines (the hero / pricing trick): every span fills the heading's width.
+   Usage: <h2 class="tk-h tk-fit" style="--fit-w:620px"><span style="--k:9.3">IT'S NOTHING SHORT OF HARD WORK.</span><span class="tk-acc" style="--k:6.6">ARE YOU READY?</span></h2>
+   kit.js measures the real --k of each line on load; the inline --k is only the no-JS fallback (line width in em). */
+.tk .tk-fit{ container-type:inline-size; width:min(100%, var(--fit-w, 560px)); margin-inline:auto; line-height:1; }
+.tk .tk-fit > span{ display:block; white-space:nowrap; font-size:calc(100cqw / var(--k, 8)); }
+.tk .tk-fit > span + span{ margin-top:.12em; }
+
+/* ---------- quote / question headings: Inter 600, tight (the .lx family) ---------- */
+.tk .tk-q{ font-size:clamp(26px, 2.8vw, 38px); font-weight:600; line-height:1.12; letter-spacing:-.022em; color:#fff; text-wrap:balance; }
+.tk .tk-q--s{ font-size:clamp(22px, 2.1vw, 28px); }
+
+/* ---------- text ---------- */
+.tk .tk-lead{ font-size:clamp(16.5px, 1.35vw, 19px); line-height:1.6; color:var(--tk-soft); max-width:640px; text-wrap:pretty; }
+.tk .tk-body p{ font-size:clamp(16px, 1.2vw, 17.5px); line-height:1.72; color:rgba(255,255,255,.78); text-wrap:pretty; }
+.tk .tk-body p + p{ margin-top:1.05em; }
+.tk .tk-body strong{ color:#fff; font-weight:700; }
+.tk .tk-src{ font-size:12.5px; line-height:1.6; letter-spacing:.01em; color:var(--tk-mute); text-wrap:pretty; }
+.tk .tk-src a{ color:var(--tk-dim); border-bottom:1px solid rgba(var(--tk-ant-rgb),.45); transition:color .2s, border-color .2s; }
+.tk .tk-src a:hover{ color:#fff; border-color:var(--tk-gold); }
+
+/* ---------- mono index (01 / 06) ---------- */
+.tk .tk-idx{ font-family:var(--tk-mono); font-size:12.5px; line-height:1; color:var(--tk-gold); letter-spacing:.02em; }
+.tk .tk-idx span{ color:var(--tk-faint); }
+
+/* ---------- outlined numeral (the library's big numbers) ---------- */
+.tk .tk-num{ font-family:var(--tk-display); font-weight:400; line-height:.8; letter-spacing:.01em; color:transparent; -webkit-text-stroke:1.5px rgba(var(--tk-gold-rgb),.7); user-select:none; }
+
+/* ---------- hairlines ---------- */
+.tk .tk-rule{ height:0; border:0; border-top:.5px solid var(--tk-line); }
+.tk .tk-goldline{ height:1px; background:linear-gradient(90deg, rgba(var(--tk-ant-rgb),0), rgba(var(--tk-ant-rgb),.8) 50%, rgba(var(--tk-ant-rgb),0)); }
+
+/* ---------- card: worn-paper grain, gold hairline on the top edge (the pricing card) ---------- */
+.tk .tk-card{
+  position:relative; padding:36px 32px;
+  border:1px solid rgba(255,255,255,.1);
+  background:var(--tk-grain), linear-gradient(180deg, rgba(24,21,14,.82) 0%, rgba(9,9,8,.88) 100%);
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  box-shadow:0 30px 70px -36px rgba(0,0,0,.9);
+  transition:border-color .3s ease, box-shadow .3s ease;
+}
+.tk .tk-card::before{ content:""; position:absolute; left:-1px; right:-1px; top:-1px; height:1px; pointer-events:none;
+  background:linear-gradient(90deg, rgba(var(--tk-ant-rgb),0), rgba(var(--tk-ant-rgb),.8) 50%, rgba(var(--tk-ant-rgb),0)); }
+.tk .tk-card--gold{
+  border-color:rgba(var(--tk-gold-rgb),.55);
+  background:var(--tk-grain), radial-gradient(70% 180px at 50% 0%, rgba(var(--tk-gold-rgb),.11), rgba(var(--tk-gold-rgb),0)),
+             linear-gradient(180deg, rgba(28,24,13,.86) 0%, rgba(9,9,8,.9) 100%);
+  box-shadow:0 0 0 1px rgba(var(--tk-gold-rgb),.1), 0 40px 90px -42px rgba(var(--tk-gold-rgb),.32);
+}
+.tk .tk-card--gold::before{ height:2px; top:-2px; background:linear-gradient(90deg, rgba(var(--tk-gold-rgb),0), var(--tk-gold) 50%, rgba(var(--tk-gold-rgb),0)); }
+.tk .tk-card--quiet{ background:var(--tk-grain), linear-gradient(180deg, rgba(16,16,15,.7) 0%, rgba(8,8,8,.8) 100%); border-color:rgba(255,255,255,.07); }
+.tk .tk-card--quiet::before{ opacity:.35; }
+
+/* crown medallion sitting on a card's top edge (same as pricing / footer). Markup: snippets-medal.html, with class tms-pr-medal renamed to tk-medal */
+.tk .tk-medal{ position:absolute; z-index:1; left:50%; top:0; width:44px; height:44px; margin:-23px 0 0 -22px; display:grid; place-items:center; border-radius:50%;
+  color:var(--tk-ant); border:1px solid var(--tk-gold); background:#0d0c09; box-shadow:0 8px 24px rgba(0,0,0,.55), 0 0 22px rgba(var(--tk-gold-rgb),.2); }
+.tk .tk-medal svg{ width:21px; height:auto; aspect-ratio:354/197; fill:currentColor; }
+
+/* small framed label (pricing badge) */
+.tk .tk-badge{ display:inline-block; padding:6px 8px 6px 10px; border:1px solid rgba(var(--tk-ant-rgb),.55); font-size:10.5px; font-weight:700; line-height:1; letter-spacing:.2em; text-transform:uppercase; color:var(--tk-ant); white-space:nowrap; }
+.tk .tk-badge--solid{ background:var(--tk-gold); border-color:var(--tk-gold); color:#0a0a0a; }
+
+/* ---------- lists ---------- */
+/* positive: the site's bullet, a small gold diamond */
+.tk .tk-list{ display:grid; gap:12px; }
+.tk .tk-list li{ position:relative; padding-left:24px; font-size:15.5px; line-height:1.55; color:var(--tk-text); }
+.tk .tk-list li::before{ content:""; position:absolute; left:2px; top:calc(.775em - 3.5px); width:7px; height:7px; border:1px solid var(--tk-gold); transform:rotate(45deg); }
+.tk .tk-list--solid li::before{ background:var(--tk-gold); }
+/* ruled variant (the .lx list): hairline between rows */
+.tk .tk-list--ruled{ gap:0; border-top:.5px solid var(--tk-line); }
+.tk .tk-list--ruled li{ padding-top:14px; padding-bottom:14px; border-bottom:.5px solid var(--tk-line); }
+.tk .tk-list--ruled li::before{ top:calc(14px + .775em - 3.5px); }
+/* negative: a thin cross in antique (never red), drawn with two hairlines */
+.tk .tk-list--no li::before, .tk .tk-x{ border:0; transform:none; width:10px; height:10px; top:calc(.775em - 5px);
+  background:linear-gradient(45deg, transparent calc(50% - .6px), rgba(var(--tk-ant-rgb),.9) calc(50% - .6px), rgba(var(--tk-ant-rgb),.9) calc(50% + .6px), transparent calc(50% + .6px)),
+             linear-gradient(-45deg, transparent calc(50% - .6px), rgba(var(--tk-ant-rgb),.9) calc(50% - .6px), rgba(var(--tk-ant-rgb),.9) calc(50% + .6px), transparent calc(50% + .6px)); }
+.tk .tk-list--ruled.tk-list--no li::before{ top:calc(14px + .775em - 5px); }
+.tk .tk-x{ display:inline-block; position:relative; top:auto; flex:0 0 auto; }
+.tk .tk-list--muted li{ color:var(--tk-dim); }
+.tk .tk-list--muted li::before{ opacity:.6; }
+
+/* ---------- buttons (pricing button) ---------- */
+.tk .tk-btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:54px; padding:0 26px;
+  font-family:var(--tk-display); font-weight:400; font-size:17px; line-height:1; letter-spacing:.07em; text-transform:uppercase; text-align:center;
+  color:var(--tk-gold); border:1px solid rgba(var(--tk-gold-rgb),.6); background:rgba(var(--tk-gold-rgb),.03);
+  transition:background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .25s ease;
+}
+.tk .tk-btn svg{ flex:0 0 auto; width:15px; height:15px; transition:transform .25s cubic-bezier(.2,.8,.2,1); }
+.tk .tk-btn:hover, .tk .tk-btn:focus-visible{ background-color:var(--tk-gold); border-color:var(--tk-gold); color:#0a0a0a; }
+.tk .tk-btn:hover svg, .tk .tk-btn:focus-visible svg{ transform:translateX(3px); }
+.tk .tk-btn:focus-visible{ outline:2px solid var(--tk-gold); outline-offset:3px; }
+.tk .tk-btn--solid{ background-color:var(--tk-gold); border-color:var(--tk-gold); color:#0a0a0a; box-shadow:0 12px 30px -14px rgba(var(--tk-gold-rgb),.6); }
+.tk .tk-btn--solid:hover, .tk .tk-btn--solid:focus-visible{ background-color:#ffd24a; border-color:#ffd24a; box-shadow:0 16px 38px -14px rgba(var(--tk-gold-rgb),.8); }
+/* arrow svg for buttons: see snippets-arrow.html (copy it verbatim) */
+
+/* ---------- video frame ---------- */
+.tk .tk-video{ position:relative; max-width:960px; margin:0 auto; }
+.tk .tk-video .video-container{ box-shadow:0 30px 80px rgba(0,0,0,.6); border:1px solid rgba(255,255,255,.08); }
+.tk .tk-video::before{ content:""; position:absolute; left:8%; right:8%; top:-1px; height:1px; z-index:21; pointer-events:none;
+  background:linear-gradient(90deg, rgba(var(--tk-ant-rgb),0), rgba(var(--tk-ant-rgb),.85) 50%, rgba(var(--tk-ant-rgb),0)); }
+
+/* ---------- one-time arrival (JS adds tk--armed, then tk--in; without JS / with reduced motion the section is simply there) ---------- */
+.tk.tk--armed .tk-rise{ opacity:0; transform:translateY(18px); }
+.tk.tk--in .tk-rise{ opacity:1; transform:none; transition:opacity .7s ease, transform .9s cubic-bezier(.2,.8,.2,1); transition-delay:calc(var(--d, 0) * 80ms); }
+
+/* ---------- responsive base ---------- */
+@media (max-width: 900px){
+  .tk{ padding:88px 20px; }
+  .tk--tight{ padding-top:56px; padding-bottom:56px; }
+  .tk .tk-card{ padding:32px 24px; }
+}
+@media (max-width: 400px){
+  .tk{ padding:72px 16px; }
+  .tk .tk-card{ padding:30px 20px; }
+  .tk .tk-cap{ letter-spacing:.22em; gap:10px; }
+  .tk .tk-cap::before, .tk .tk-cap::after{ width:28px; }
+}
+@media (max-width: 560px){
+  .tk .tk-cap{ letter-spacing:.2em; text-align:center; }
+  .tk .tk-cap--long::before, .tk .tk-cap--long::after{ display:none; }   /* long captions drop the hairlines on phones instead of wrapping between them */
+}
+@media (prefers-reduced-motion: reduce){
+  .tk .tk-btn, .tk .tk-btn svg, .tk .tk-card{ transition:none; }
+}
