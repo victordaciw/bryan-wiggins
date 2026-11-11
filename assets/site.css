@@ -628,3 +628,11 @@ button{ font:inherit; }
   .tk.bw-roster .bw-ledger{ margin-top:48px; }
   .tk .bw-head{ margin-bottom:48px; }
 }
+
+/* Suicide Charlie band (coming soon) */
+.bw-soon{ border-top:.5px solid var(--tk-line); border-bottom:.5px solid var(--tk-line); background:linear-gradient(90deg, rgba(var(--tk-gold-rgb),.07), rgba(var(--tk-gold-rgb),0) 60%); }
+.bw-soon-in{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px 48px; }
+.bw-soon-h{ margin:14px 0 0; font-family:var(--tk-display); font-weight:400; font-size:clamp(44px, 6.4vw, 92px); line-height:.9; letter-spacing:.01em; text-transform:uppercase; color:#fff; }
+.bw-soon-h span{ color:var(--tk-gold); }
+.bw-soon-side{ display:flex; flex-direction:column; align-items:flex-start; gap:16px; max-width:420px; }
+.bw-soon-p{ margin:0; color:var(--tk-soft); font-size:17px; line-height:1.5; }
